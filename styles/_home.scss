@@ -1,0 +1,425 @@
+// ---------- Homepage ----------
+// flight-offer-deals
+.flight-offer-deals {
+  @extend %full-width;
+}
+
+.offerdeals-bgimg {
+  border-radius: 10px;
+}
+
+
+img.airhostess-with-belt {
+  width: 235px;
+}
+
+.flgoffer-cover-rt {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-top: 58%;
+  position: relative;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  @include css3('transition', all 0.4s);
+}
+
+.flgoffer-cover-rt.lg {
+  padding-top: 82%;
+}
+ 
+ 
+ 
+ 
+// latest-new-blogs
+.latest-new-blogs {
+  @extend %full-width;
+  z-index: 0;
+  &.spcmb-60 {
+    padding-bottom: 30px;
+}
+  .section-ltblg {
+    margin-bottom: 10px;
+  }
+
+  .col-md-6 {
+    letter-spacing: 0.4px;
+  }
+
+  .blog-body-list ul li:last-child {
+    @include mq('max', 1199px) {
+      margin-bottom: -9px;
+    }
+  }
+}
+
+.large-blog-home {
+  position: relative;
+  height: 100%;
+
+  &:hover {
+    .bg-bck {
+      @include css3('transform', scale(1.3));
+
+      &::before {
+        height: 100%;
+      }
+    }
+  }
+
+  .flgoffer-cover-rt.lg {
+    padding-top: 68.6%;
+    height: 100%;
+  }
+
+  %beforeabsl {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .bg-bck {
+    @extend %beforeabsl;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include css3('transition', all 0.6s cubic-bezier(0.5, 0, 0, 1.25));
+
+    &::before {
+      content: '';
+      @extend %beforeabsl;
+      height: 60%;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.80) 100%);
+      background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.80) 100%);
+      background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.80) 100%);
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.80) 100%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.80) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+      @include css3('transition', all 0.6s cubic-bezier(0.5, 0, 0, 1.25));
+
+    }
+  }
+
+
+  .info-overlay {
+    color: $white;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+
+    h3 {
+      margin-bottom: 0;
+      color: $white;
+      text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.50);
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .date-with-icon {
+    color: $white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.30);
+    font-size: 16px;
+    font-weight: 500;
+
+    img {
+      margin-right: 9px;
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      width: 18px;
+    }
+  }
+}
+
+
+
+.blog-body-list,
+.blog-content-fl {
+  .date-with-icon {
+    color: $davgray;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 11px;
+
+    @include mq('max', 575px) {
+      font-size: 13px;
+    }
+
+    img {
+      margin-right: 9px;
+      display: inline-block;
+      position: relative;
+      top: -2px;
+
+      @include mq('max', 1299px) {
+        width: 14px;
+        margin-right: 7px;
+      }
+
+      @include mq('max', 425px) {
+        width: 12px;
+      }
+    }
+  }
+}
+
+.blog-body-list {
+
+  .flgoffer-cover-rt,
+  .flgofferover-hide {
+    @include css3('transition', all 0.4s cubic-bezier(0.5, 0, 0, 1.25));
+  }
+
+  .flgoffer-cover-rt {
+    padding-top: 61%;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding-bottom: 17px;
+      margin-bottom: 17px;
+      border-bottom: solid 1px #e9e9e9;
+
+      &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      &:hover {
+        .flgoffer-cover-rt {
+          @include css3('transform', scale(1.3));
+        }
+
+        .flgofferover-hide {
+          @include css3('box-shadow', 0 16px 22px 0 rgba(16, 18, 19, 0.18));
+        }
+
+        .mini-description {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .mini-description {
+    color: $charcoal;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .paragraph-des {
+    color: $davgray;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 12px;
+  }
+
+  .content-body {
+    padding-top: 14px;
+    letter-spacing: 0.4px;
+  }
+}
+
+.blog-lts-thumbnail {
+  width: 30.9%;
+  min-width: 30.9%;
+  margin-right: 24px;
+}
+
+.flgofferover-hide {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+// why-reservation-deals
+.why-reservation-deals {
+  @extend %full-width;
+  padding: 40px 0;
+  letter-spacing: 0.4px;
+
+  h3 {
+    color: $charcoal;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $davgray;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+
+  .container {
+    max-width: 996px;
+  }
+}
+ 
+.error-font-15 {
+  font-size: 15px;
+  background: #fff6f7;
+  padding: 16px 6px;
+  border-radius: 8px;
+  @include mq('max', 575px) {
+    font-size: 14px; 
+  }
+  .iconify {
+    position: relative;
+    top: -2px;
+    margin-right: 2px;
+    font-size: 136%;
+    animation: flash 1.6s linear infinite;
+    -webkit-animation: flash 1.6s linear infinite;
+    @include mq('max', 575px) {
+      top: -1px;
+    }
+  }
+  @keyframes flash {
+    0%,50%,100%{
+      opacity: 0;
+    }
+  
+    35%{
+      opacity: 1; 
+    }
+    
+    65%{
+      opacity: 1; 
+    }
+    
+  }
+}
+
+// car-facility-des 
+.car-facility-des {
+  margin: 15px 0;
+
+  li {
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background: $davgray;
+      border-radius: 50%;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+      margin: 0 8px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+// front-dfg 
+%backanimcommon {
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.btn-rp {
+  @include css3('transform', translateY(70%));
+  @include css3('transition', all 0.4s);
+}
+
+.back-dfg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $secondary;
+  margin: 0;
+  border-radius: 16px;
+  padding: 12%;
+  color: $white;
+  opacity: 0;
+  @include css3('transform', scale(0.95));
+  @extend %backanimcommon;
+
+  &,
+  h3,
+  .price,
+  .date-month {
+    color: $white;
+  }
+}
+
+.anfadeup {
+  animation-name: anfadeInUp;
+  -webkit-animation-name: anfadeInUp;
+  @extend %backanimcommon;
+  transform-origin: top center;
+  -webkit-transform-origin: top center;
+}
+
+ 
+
+.exp-menustv {
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    @include css3('box-shadow',0 16px 824px 259px rgb(0 0 0 / 12%));
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
+    @include css3('animation-name', fadeInUpperxPhone);
+    @include css3('animation-fill-mode', both);
+    @include css3('transform-origin', top center);
+    @include css3('border-radius', 0 0 6px 6px);
+    padding: 0;
+    top: 100% !important;
+    margin-top: 5px;
+    border: none;
+    inset: auto !important; 
+  }
+
+  img {
+    @include css3('transition', all 0.3s cubic-bezier(0.5, 0, 0, 1.25));
+  }
+
+  &.show {
+    .input-group-text.last {
+      img {
+        @include css3('transform', rotate(180deg));
+      }
+    }
+  }
+
+}
+ 

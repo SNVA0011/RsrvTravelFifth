@@ -1,0 +1,163 @@
+@import "../../styles/variable";
+@import "../../styles/mixins";
+
+.TopBlogWave {
+    @include bgPath('top-airline-lgred.webp');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 85px;
+    background-size: 100%;
+    @include mq('max', 767px) {
+        height: 68px;
+    }
+}
+
+.TopBlogBlock {
+    position: relative;
+    padding: 40px 0 35px; 
+    &::before {
+        content: '';
+        background-color: $primaryoff;
+        width: 100%;
+        height: 228px;
+        position: absolute;
+        top: -2px;
+        z-index: 0;
+    }
+}
+
+.TopBlogThumb {
+    position: relative;
+    padding-top: 79%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px; 
+   &, img {
+        @include css3(transition, all 600ms cubic-bezier(0.5, 0, 0, 1.25));
+    }
+    
+    &::before{
+        content: "";
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        @include css3(transition, all 350ms cubic-bezier(0.5, 0, 0, 1.25));
+        z-index: 2;
+        border-radius: 50%;
+    }
+
+    &::before {
+        bottom: -50%;
+        left: -50%;
+        background-color: $primary;
+    }
+}
+ 
+
+.TopBlogCard {
+    @include css3(transition, all 0.4s cubic-bezier(0.5, 0, 0, 1.25));
+
+    &:hover {
+        .TopBlogThumb {
+            @include css3(box-shadow, 0 28px 50px -12px rgb(0 0 0 / 24%)); 
+            @include css3(transform, scale(1.04));
+
+            img {
+                @include css3(transform, scale(1.25));
+            } 
+    
+            &::before {
+                bottom: -30px;
+                left: -30px; 
+                -webkit-box-shadow: 0 0 0px 20px rgba($primary, 0.2), 0 0 0px 40px rgba($primary, 0.2);
+                -moz-box-shadow: 0 0 0px 20px rgba($primary, 0.2), 0 0 0px 40px rgba($primary, 0.2);
+                -ms-box-shadow: 0 0 0px 20px rgba($primary, 0.2), 0 0 0px 40px rgba($primary, 0.2);
+                -o-box-shadow: 0 0 0px 20px rgba($primary, 0.2), 0 0 0px 40px rgba($primary, 0.2);
+                     box-shadow: 0 0 0px 20px rgba($primary, 0.2), 0 0 0px 40px rgba($primary, .5)
+            }
+        }
+        .BlogTitle {
+            color: $primary; 
+        }
+         
+
+       
+
+    }
+}
+
+.TopBlogCont {
+    position: relative;
+    z-index: 0;
+}
+
+
+.TopBlogRow {
+    margin: 0 -15px;
+      @include mq('max', 1299px) {
+        margin: 0 -12px;
+    }
+
+    @include mq('max', 1299px) {
+        margin: 0 -10px;
+    } 
+    @include mq('max', 991px) {
+       @include scrollHorizontal;
+    } 
+}
+
+.TopBlogCol {
+    padding: 0 15px;
+       @include mq('max', 1299px) {
+        padding: 0 12px;
+    }
+
+    @include mq('max', 1299px) {
+        padding: 0 10px;
+    }
+    @include mq('max', 991px) {
+        @include columnGrid(230px);
+    } 
+}
+
+.BlogDate, .BlogTitle{
+    font-size: 16px;
+    font-style: normal;
+   @include SixteenFontMedia;
+}
+
+.BlogDate {
+    color: $charcoal; 
+    font-weight: 500;
+    line-height: normal;
+}
+
+.BlogTitle {
+    color: $charcoal; 
+    font-weight: 500;
+    line-height: 26px;
+    margin-top: 6px;
+    letter-spacing: 0.4px;
+    @include mq('max', 991px) {
+        line-height: 1.5;
+       
+    }
+}
+
+.BlogDateImg {
+    margin-right: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    @include mq('max', 1199px) {
+        margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: -2px;
+    }
+    @include mq('max', 991px) {
+        width: 14px;
+        height: 14px;
+      }
+}

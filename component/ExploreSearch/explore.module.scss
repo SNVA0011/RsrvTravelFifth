@@ -1,0 +1,216 @@
+@import "../../styles/variable";
+@import "../../styles/mixins";
+
+.ExploreSrcBlock {
+    padding: 60px 0 20px; 
+    position: relative;
+    z-index: 0;
+}
+
+.ExploreSrcDes {
+    color: #333333;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px;
+    font-size: 16px;
+    @include SixteenFontMedia;
+    @include mq('max', 767px) {
+        margin-bottom: 6px;
+    }
+}
+
+.ExploreSrcGrow,
+.ExploreSrcThumb {
+    position: relative;
+    z-index: 2;
+}
+
+
+.ExploreSrcGrow { 
+    @include mq('min', 768px) {
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+}
+
+.ExploreSrcDate {
+    color: $lightgray;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+    @include mq('max', 767px) {
+        font-size: 11px;
+    }
+}
+
+.ExploreSrcRow {
+    margin: 0 -12px -40px;
+
+    @include mq('max', 1199px) {
+        margin: 0 -12px -30px;
+    }
+
+    @include mq('max', 991px) {
+        @include scrollHorizontal;
+        padding-top: 60px;
+        padding-bottom: 63px;
+        margin: -60px -6px;
+        position: relative;
+    }
+    @include mq('max', 767px) {
+        margin-bottom: 0;
+        padding-bottom: 56px;
+    }
+}
+
+.ExploreSrcCol {
+    padding: 0 12px 40px;
+
+    @include mq('max', 1199px) {
+        padding: 0 12px 30px;
+    }
+
+    @include mq('max', 991px) {
+        @include columnGrid(240px);
+        padding-bottom: 0;
+    }
+
+    @include mq('max', 767px) {
+        @include columnGrid(110px);
+        text-align: center;
+        padding: 0 6px 0;
+    }
+}
+
+
+.ExploreSrcCard,
+.ExploreSrcCard::before,
+.ExploreSrcImg,
+.ExploreSrcThumb,
+.ExploreSrcPlane {
+    transition: all 350ms ease;
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -ms-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+}
+
+
+.ExploreSrcCard {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+
+    @include mq('max', 767px) {
+        padding-bottom: 15px;
+    }
+
+    &::before {
+        content: "";
+        width: 0;
+        position: absolute;
+        height: 92%;
+        bottom: 4%; 
+        border-right: 0;
+        border-radius: 10px;
+
+        @include mq('max', 991px) {
+            height: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        @include mq('max', 767px) {
+            height: 50%;
+            width: 110%;
+            bottom: auto;
+            top: 0;
+            left: -5%;
+        }
+    }
+}
+
+.ExploreSrcThumb,
+.ExploreSrcCard,
+.ExploreSrcImg {
+    border-radius: 10px;
+}
+
+.ExploreSrcCard:hover {
+    &::before {
+        background-color: $primaryoff;
+
+        @include mq('min', 768px) {
+            border-right: solid 2px $primary;
+            width: 100%;
+        }
+
+        @include mq('max', 767px) {
+            height: 100%;
+            border-bottom: solid 2px $primary;
+        }
+    }
+
+    .ExploreSrcDes {
+        color: $primary;
+    }
+
+    .ExploreSrcThumb {
+        @include css3('transform', scale(1.15));
+
+        img {
+            @include css3('transform', scale(1.15));
+        }
+
+        &:after {
+            width: 150%;
+            background-color: rgba(255, 255, 255, 0);
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+            @include css3('transition-delay', 0.24s);
+        }
+    }
+}
+
+
+.ExploreSrcThumb {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    @include mq('max', 767px) {
+        margin-bottom: 16px;
+        @include css3('transform-origin', bottom center);
+
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.60);
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none;
+        @include css3('transform', skewX(-20deg));
+        @include css3('transform-origin', top left);
+        @include css3('filter', blur(4px));
+    }
+
+    span {
+        display: block;
+        float: left;
+        width: 100%;
+        overflow: visible !important;
+    }
+}

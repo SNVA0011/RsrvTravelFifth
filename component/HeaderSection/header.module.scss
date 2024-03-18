@@ -1,0 +1,849 @@
+@import "../../styles/variable";
+@import "../../styles/mixins";
+
+.navDark {
+  background-color: #f4f6f8;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: solid 1px #e9ecf1;
+
+  a {
+    color: $charcoal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &:hover {
+      color: lighten($primary, 15%);
+    }
+  }
+
+  .IconMini {
+    color: $primary;
+    margin-right: 8px;
+    font-size: 20px;
+    position: relative;
+    top: -1px;
+    display: inline-block;
+  }
+}
+
+.headerClassic.FlightHeader.headerClsFix .headerClsNavbar,
+.headerClassic.FlightHeader .headerClsNavbar,
+.Classicempty.FlightHdEmpty{
+  min-height: 60px;
+  @include mq('max', 1199px) {
+    min-height: 55px;
+  }
+
+}
+
+.headerClassic {
+  background-color: #f4f6f8;
+ 
+  &.FlightHeader {
+    @include mq('min', 992px) {
+      background-color: #100f0e;
+    } 
+    .SignInBtn { 
+      height: 36px;
+      min-width: 105px;
+      font-size: 15px;
+      border-radius: 60px;
+      @include mq('max', 425px) {
+        font-size: 0;
+        min-width: auto;
+        height: 32px;
+      }
+    }
+
+    .accountIcon { 
+      font-size: 17px;
+      margin-right: 7px;
+      @include mq('max', 425px) {
+        font-size: 28px; 
+        margin: 0;
+        top: 0px;
+      }
+    }
+
+    .mainMenu {
+      display: none; 
+    } 
+    .accountIconMr::after { 
+      @include mq('max', 1199px) {
+        top: 2px;
+      }
+    }
+  }
+
+  &.headerClsFix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    -webkit-animation-name: slideInHeaderfx;
+    animation-name: slideInHeaderfx;
+    -webkit-animation-duration: 0.20s;
+    animation-duration: 0.20s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    background-color: $white;
+    -webkit-box-shadow: 0px 1px 8px rgba(215, 216, 222, 0.41);
+       -moz-box-shadow: 0px 1px 8px rgba(215, 216, 222, 0.41);
+            box-shadow: 0px 1px 8px rgba(215, 216, 222, 0.41);
+
+    .mainMenu li a::after {
+      margin-top: 14px;
+      height: 5px;
+    }
+
+    .headerClsNavbar {
+      @include mq('min', 992px) {
+        min-height: 70px;
+      }
+    }
+
+    .currencyName {
+      @include mq('min', 992px) {
+        background-color:  lighten($secondary, 48%);;
+        @include css3(box-shadow, none);
+      }
+    }
+
+  }
+}
+
+
+// slideInHeaderfx
+@-webkit-keyframes slideInHeaderfx {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInHeaderfx {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+
+.SignInBtn {
+  min-width: 145px;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  @include mq('max', 1299px) {
+    min-width: 140px;
+  }
+
+  @include mq('max', 1199px) {
+    min-width: 135px;
+  }
+
+  @include mq('max', 575px) {
+    border: none;
+    padding: 0 16px;
+    min-width: auto;
+  }
+
+  @include mq('max', 425px) {
+    font-size: 0;
+    padding: 0;
+    height: 32px;
+    width: 32px;
+    border-radius: 50px;
+  }
+
+  .accountIcon {
+    font-size: 24px;
+    position: relative;
+    margin-top: -8px;
+    top: 2px;
+display: inline-block;
+    @include mq('min', 426px) {
+      margin-right: 10px;
+    }
+
+    @include mq('max', 425px) {
+      font-size: 28px;
+      position: relative;
+      top: 4px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .accountIcon {
+      color: $white;
+    }
+  }
+}
+
+
+
+.mainMenu {
+  li {
+    display: inline-block;
+    padding: 0 20px;
+
+    @include mq('max', 1299px) {
+      padding: 0 15px;
+    }
+
+    @include mq('max', 1199px) {
+      padding: 0 10px;
+    }
+
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: $charcoal;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      position: relative;
+      min-width: 80px;
+      text-align: center;
+
+      @include mq('max', 1299px) {
+        padding: 0.5rem 0.8rem;
+      }
+
+      @include mq('max', 1199px) {
+        padding: 0.5rem 0.6rem;
+      }
+
+      &::after {
+        content: "";
+        height: 3px;
+        background: $primary;
+        border-radius: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        @include css3('transition', all 150ms cubic-bezier(.4, 0, .2, 1));
+        width: 0;
+      }
+
+      &:hover {
+        color: $primary;
+      }
+
+      &.NavbarLinkAct {
+        font-weight: 700;
+      }
+
+      &.NavbarLinkAct,
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
+
+.DisableNav {
+  opacity: 0.4;
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+
+  a {
+    pointer-events: none;
+  }
+}
+
+
+.borderFlgcurrency {
+  padding: 0;
+  width: auto;
+  position: relative;
+
+  &[aria-expanded="true"] {
+    @include mq('min', 992px) {
+      z-index: 1001;
+    }
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:first-child:active {
+    background: transparent !important;
+    border: none;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  @include mq('max', 991px) {
+    background: transparent;
+    border: none;
+    padding: 17px 0;
+    width: auto;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.langFlag,
+.currencyName {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+
+  @include mq('max', 991px) {
+    display: inline-block;
+  }
+}
+
+
+.headerCurrencyMenu,
+.headerLangMenu {
+  display: inline-block;
+
+  .dropdownMenu {
+    border: none;
+
+    @include css3('animation-fill-mode', both);
+
+    @include mq('min', 992px) {
+      right: 0;
+      left: auto;
+      border-radius: 2px;
+      width: 750px;
+      padding: 30px;
+      @include css3('box-shadow', 0 16px 24px 10000px rgba(0, 0, 0, 0.58));
+      border-radius: 5px;
+      animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
+      -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
+      @include css3('animation-name', fadeInUpperxPhoneHg);
+      @include css3('transform-origin', top right);
+      margin-top: 22px;
+      animation-duration: 0.5s;
+      -webkit-animation-duration: 0.5s;
+    }
+
+    @include mq('max', 991px) {
+      width: 100%;
+      border-radius: 0;
+      padding: 24px;
+      z-index: 10;
+      height: 100%;
+      overflow: auto;
+      top: auto !important;
+      bottom: 0 !important;
+      margin: 0;
+      animation-duration: 0.2s;
+      -webkit-animation-duration: 0.2s;
+    }
+
+    @include mq('max', 767px) {
+      padding: 20px;
+    }
+
+    @include mq('max', 360px) {
+      padding: 18px 16px;
+    }
+
+    &::after {
+      content: "";
+      top: -18px;
+      right: 5px;
+      position: absolute;
+      border: 9px solid transparent;
+      border-bottom-color: $secondary;
+    }
+  }
+
+  .dropItem {
+    padding: 7px 10px;
+    background: transparent;
+    color: $charcoal;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 6px; 
+    &.rippleWvActive {
+      font-weight: 800;
+
+      &::before {
+        @extend %hoverripple;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        @include css3('transform', translateX(-50%));
+      }
+
+      .FlexGrowBtn {
+        color: lighten($secondary, 48%);
+      }
+    }
+
+    &.rippleWvActive,
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .rippleWv::before {
+    @extend %headbtnripple;
+  }
+}
+
+.rippleWv {
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: lighten($secondary, 49%);
+    width: 10%;
+    height: 40%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 1;
+    top: 35%;
+    left: 45%;
+    @include css3('transform', scale(0));
+  }
+
+  &:hover::before {
+    @extend %hoverripple;
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    @include css3('transform', translateX(-50%));
+  }
+}
+
+
+// fadeInUpperxPhoneHg (dropdown-menu)
+@-webkit-keyframes fadeInUpperxPhoneHg {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(-10deg) scale(0.98);
+    transform: rotateX(-10deg) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUpperxPhoneHg {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(-10deg) scale(0.98);
+    transform: rotateX(-10deg) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+
+
+
+
+.headerLangMenu .dropdownMenu {
+  @include mq('max', 991px) {
+    @include css3('animation-name', fadeInLeftDp);
+  }
+}
+
+.headerCurrencyMenu .dropdownMenu {
+  @include mq('max', 991px) {
+    @include css3('animation-name', fadeInRightDp);
+  }
+}
+
+@-webkit-keyframes fadeInLeftDp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeftDp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInRightDp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRightDp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+
+
+.headerLangMenu {
+  .dropItem {
+    position: relative;
+    padding-right: 79px;
+    padding-left: 6px;
+    white-space: normal;
+
+    svg {
+      margin-right: 10px;
+      border-radius: 5px;
+      top: 0
+    }
+
+    .FlexGrow {
+      position: absolute;
+      right: 6px;
+    }
+
+    .FlexGrowBtn {
+      background: transparent;
+      border: none;
+      padding: 0;
+      font-size: 12px;
+      color: #a5a5a5;
+      margin-left: 10px;
+      font-weight: 600;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: $charcoal;
+      }
+    }
+  }
+}
+
+.FlexGrowRow {
+  margin: 0 -13px -10px;
+
+  .FlexGrowCol {
+    margin-bottom: 10px;
+    padding: 0 6px;
+  }
+}
+
+.FlexRowurrency {
+  margin: 0 -16px -10px;
+
+  .FlexGrowCol {
+    margin-bottom: 10px;
+    padding: 0 6px;
+  }
+}
+
+
+.headerCurrencyMenu {
+  h5 {
+    color: $charcoal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+
+  .wFullw {
+    margin-bottom: 25px;
+
+    @include mq('max', 991px) {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .dropItem {
+    svg {
+      margin-right: 16px;
+      font-size: 110%;
+      position: relative;
+      top: -2px;
+display: inline-block;
+      @include mq('max', 991px) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .row {
+    margin: 0 -16px -9px;
+
+    .col-12 {
+      margin-bottom: 9px;
+      padding: 0 6px;
+    }
+  }
+}
+
+
+
+.headerLangMenu {
+  top: -2px;
+  margin-right: 20px;
+}
+
+
+.currencyName {
+  border-radius: 4px;
+  min-width: 24px;
+  text-align: center;
+  font-size: 13px;
+  padding: 1.5px 0;
+  line-height: normal;
+
+  @include mq('min', 992px) {
+    background-color: $white;
+    @include css3(box-shadow, 0px 1px 12px 1px rgb(0 0 0 / 6%));
+  }
+
+  @include mq('max', 991px) {
+    color: $black;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 8px;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+  }
+
+
+  svg {
+    font-size: 12px;
+    display: inline-block;
+  }
+}
+
+
+.langFlag svg {
+  width: 24px;
+  border-radius: 4px;
+
+  @include mq('max', 991px) {
+    border-radius: 6px;
+  }
+}
+
+.type-down-ats {
+  margin-left: 8px;
+  opacity: 0.5;
+}
+
+.typenameAts {
+  color: $black;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 8px;
+  position: relative;
+  top: 1px;
+
+  @include mq('min', 992px) {
+    display: none;
+  }
+
+  @include mq('max', 991px) {
+    font-weight: 700;
+    display: inline-block;
+  }
+}
+
+.typenameAtsIcon {
+  margin-left: 8px;
+  opacity: 0.5;
+}
+
+.navCurrencyHead {
+  @include mq('max', 991px) {
+    margin-left: auto;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.accountIconMr {
+  margin-right: 30px;
+
+  @include mq('max', 991px) {
+    margin-right: 25px;
+    padding-right: 25px;
+    position: relative;
+  }
+
+  @include mq('max', 767px) {
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+
+  @include mq('max', 575px) {
+    margin-right: 18px;
+    padding-right: 18px;
+  }
+
+  @include mq('max', 425px) {
+    margin-right: 15px;
+    padding-right: 15px;
+  }
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    height: 32px;
+    border-right: solid 1px #dfe2e5;
+
+    @include mq('min', 992px) {
+      display: none;
+    }
+
+    @include mq('max', 425px) {
+      top: 2px;
+    }
+  }
+}
+
+.headerClsNavbar {
+  min-height: 90px;
+
+  @include mq('max', 991px) {
+    min-height: 75px;
+  }
+
+  @include mq('max', 575px) {
+    min-height: 65px;
+  }
+}
+
+.Classicempty {
+  min-height: 90px;
+  display: none;
+
+  @include mq('max', 991px) {
+    min-height: 75px;
+  }
+
+  @include mq('max', 575px) {
+    min-height: 65px;
+  }
+
+  &.BlockEmpt {
+    display: block;
+  }
+}
+
+.currencylogoIk {
+  @include mq('max', 991px) {
+    margin-right: 7px;
+    font-size: 16px !important;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.MostUsCol {
+  margin-bottom: 9px;
+  padding: 0 6px;
+}

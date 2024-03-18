@@ -1,0 +1,159 @@
+// dependencies
+@import "variable";
+@import "mixins";
+@import "common";
+@import "animate";
+
+/*img*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+select,
+textarea,
+button {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  border: none;
+}
+
+a,
+.btn,
+.iconify {
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+}
+
+select {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flglistfilter-date .nv,
+.flgdate-card, 
+.engineexp-text.input-group,
+a,
+label,
+.country-list .country,
+a:focus,
+a:hover {
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+::-ms-clear,
+select::-ms-expand {
+  display: none;
+}
+
+/*body*/
+body {
+  background-color: $white;
+  color: #000;
+  font-size: 14px;
+  font-family: $fontDefault;
+  font-kerning: none;
+  font-display: swap;
+  touch-action: pan-x pan-y;
+  font-style: normal;
+  line-height: normal;
+  word-break: break-word;
+}
+
+#__next,
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+/*webkit-scrollbar*/
+@include mq('min', 1200px) {
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #dee1e7;
+    border-radius: 60px;
+    border: 2px solid #ffffff;
+    height: 100px;
+
+    &:hover {
+      background-color: #cfd4dc;
+    }
+  }
+
+  .container {
+    max-width: 1260px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+
+
+@include min-max(1400px, 1500px) {
+  .container {
+    max-width: 92%;
+  }
+}
+
+@include min-max(1200px, 1399px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+
+.clac_active {
+  cursor: pointer;
+}
+
+.clac_disable {
+  pointer-events: none;
+  color: red !important;
+}
+
+.slec_date {
+  color: red !important;
+}
+
+//=== import scss files ====  
+@import "home";
+@import "engine";
+@import "blog";
+@import "contactus";
+@import "bookingconf";
+@import "flightlisting";
+@import "terms";
+@import "aboutus";
+@import "airline";
+@import "checkout";
+@import "resposnive";

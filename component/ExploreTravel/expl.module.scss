@@ -1,0 +1,246 @@
+@import "../../styles/variable";
+@import "../../styles/_mediaprefix";
+
+
+.Trv {
+    margin: 0 12px;
+}
+
+.TrvImg {
+    position: absolute;
+    bottom: -23px;
+    left: -7px;
+    min-width: 164px;
+
+    @include mq('max', 1299px) {
+        min-width: 155px;
+        width: 155px;
+        bottom: -20px;
+    }
+
+    @include mq('max', 1199px) {
+        min-width: 120px;
+        width: 120px;
+        bottom: -18px;
+    }
+
+    @include mq('max', 991px) {
+        min-width: 80px;
+        width: 80px;
+        left: 3px;
+        bottom: -12px;
+    }
+
+    @include mq('max', 767px) {
+        min-width: 90px;
+        width: 90px;
+        bottom: -14px;
+    }
+
+    @include mq('max', 575px) {
+        min-width: 80px;
+        width: 80px;
+        bottom: -12px;
+        left: 0px;
+    }
+
+    @include mq('max', 425px) {
+        min-width: 58px;
+        width: 58px;
+        bottom: -9px;
+        left: 3px;
+    }
+}
+
+.TrvWrp {
+    color: $charcoal; 
+    h1 {
+        max-width: 497px;
+        font-family: 'Overlock', sans-serif;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 800;
+        margin-bottom: 17px;
+        position: relative;
+
+        @include mq('max', 1299px) {
+            font-size: 50px;
+        }
+
+        @include mq('max', 1199px) {
+            font-size: 40px;
+            line-height: 1.3;
+            max-width: 377px;
+            margin-bottom: 13px;
+        }
+
+        @include mq('max', 991px) {
+            font-size: 33px;
+            max-width: 337px;
+            margin-bottom: 32px;
+        }
+
+        @include mq('max', 767px) {
+            font-size: 26px;
+            max-width: none;
+            text-align: center;
+            margin-bottom: 34px;
+            margin-top: 16px;
+        }
+
+        @include mq('max', 575px) {
+            margin-bottom: 28px;
+            margin-top: 6px;
+        }
+
+        @include mq('max', 460px) {
+            max-width: 277px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 28px;
+        }
+
+        @include mq('max', 425px) {
+            font-size: 22px;
+    max-width: 245px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+
+        @include mq('max', 991px) {
+            display: none;
+        }
+
+
+    }
+}
+
+
+.TrvWrpPlane {
+    position: absolute;
+    width: 250px;
+    top: 34px;
+    left: -300px;
+
+    @include mq('min', 1700px) {
+        @include css3('transform', rotate(-45deg) scale(-1));
+    }
+
+    @include mq('max', 1699px) {
+        @include css3('transform', rotate(-30deg));
+        width: 62%;
+        top: -66px;
+        left: 100%;
+    }
+
+    @include mq('max', 1199px) {
+        top: -116px;
+        @include css3('transform', rotate(-35deg));
+
+    }
+
+    @include mq('max', 991px) {
+        top: -76px;
+        margin-left: 15px; 
+    }
+
+    @include mq('max', 767px) {
+        display: none
+    } 
+}
+
+.ExploreTravel {
+    background-color: #f4f6f8;
+    @include bgPath('shape-enginebck.webp');
+    background-position: bottom center;
+    background-size: 70%;
+    background-repeat: repeat-x; 
+
+    @include mq('max', 1199px) {
+        margin-bottom: 30px;
+        background-size: 95%;
+    }
+
+    @include mq('max', 991px) {
+        margin-bottom: 40px;
+    }
+
+    @include mq('max', 767px) {
+        margin-bottom: 21px;
+        padding-top: 10px;
+        background-size: 80%; 
+    }
+
+    @include mq('max', 575px) {
+        background-image: none;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
+
+
+.TrvWrpRight,
+.Trv {
+    display: inline-block;
+    position: relative;
+}
+
+.TrvWrpRight {
+    top: 4px;
+
+    @include mq('max', 1599px) {
+        margin-top: -28px;
+    }
+
+    @include mq('max', 1199px) {
+        margin-top: -20px;
+    }
+
+    @include mq('max', 991px) {
+        margin-top: 0;
+    }
+
+    @include mq('max', 767px) {
+        width: 75%;
+    }
+
+    @include mq('max', 425px) {
+        width: 80%;
+    }
+}
+
+
+.TrvEngWrp {
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+    width: 1091px;
+
+    @include mq('max', 1299px) {
+        margin-top: 55px; 
+    }
+
+    @include mq('max', 1199px) {
+        margin-top: 45px;
+        width: 937px;
+        margin-bottom: -120px;
+    }
+
+    @include mq('max', 991px) {
+        margin-top: 0;
+        width: 704px;
+        margin-bottom: -120px;
+    }
+
+    @include mq('max', 767px) {
+        margin-bottom: -40px;
+        width: 100%;
+    } 
+}
