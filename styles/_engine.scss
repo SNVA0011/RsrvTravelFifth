@@ -518,7 +518,7 @@
 .wroweng-wrap,
 .engineexp-fields,
 .engineexp-fields::after {
-    border-radius: 80px;
+    border-radius: 44px;
 
     @include mq('max', 1199px) {
         border-radius: 10px;
@@ -1656,6 +1656,7 @@ img.swap-desg {
             right: -23px;
             height: 30px;
             bottom: -6px;
+            border-radius: 30px;
         }
     }
     }
