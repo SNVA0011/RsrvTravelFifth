@@ -64,7 +64,7 @@ const FlgRoDoFooter = ({ data, airlines, airport, search }) => {
                 <strong>
                   Departure <Icon icon="mdi:airplane-takeoff" />
                 </strong>
-                <b className="d-none d-lg-inline-block mx-2"> <Icon icon="ph:dot-fill" color="#15a9e0" /> </b>
+                <b className="d-none d-lg-inline-block mx-2"> <Icon icon="ph:dot-fill" color="#eabe6c" /> </b>
                 <span className="d-none d-lg-inline-block">
                   {outBoundAirline}
                 </span>
@@ -131,7 +131,7 @@ const FlgRoDoFooter = ({ data, airlines, airport, search }) => {
                 <strong>
                   Return <Icon icon="mdi:airplane-landing" />
                 </strong>
-                <b className="d-none d-lg-inline-block mx-2"> <Icon icon="ph:dot-fill" color="#15a9e0" /> </b>
+                <b className="d-none d-lg-inline-block mx-2"> <Icon icon="ph:dot-fill" color="#eabe6c" /> </b>
                 <span className="d-none d-lg-inline-block">
                   {inBoundAirline}
                 </span>
@@ -276,16 +276,16 @@ const FlgRoDoFooter = ({ data, airlines, airport, search }) => {
                         <Icon icon="ic:baseline-flight-takeoff" /> Departing
                         Flight{" "}
                         <div className="fluent-inline ms-2">
-                          <Icon icon="fluent:send-16-filled" color="#15a9e0" />
-                          <Icon icon="fluent:send-16-filled" color="#15a9e0" />
+                          <Icon icon="fluent:send-16-filled" color="#eabe6c" />
+                          <Icon icon="fluent:send-16-filled" color="#eabe6c" />
                         </div>{" "}
                       </>
                     ) : (
                       <>
                         <Icon icon="ic:baseline-flight-land" /> Return Flight{" "}
                         <div className="fluent-inline ms-2">
-                          <Icon icon="fluent:send-16-filled" color="#15a9e0" />
-                          <Icon icon="fluent:send-16-filled" color="#15a9e0" />
+                          <Icon icon="fluent:send-16-filled" color="#eabe6c" />
+                          <Icon icon="fluent:send-16-filled" color="#eabe6c" />
                         </div>{" "}
                       </>
                     )}

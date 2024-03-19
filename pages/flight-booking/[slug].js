@@ -101,8 +101,8 @@ const Slug = ({
                   <h3 className="text-white">
                     {airlineRouteDetailaResult[0].heading} &nbsp;
                     <div className="fluent-inline">
-                      <Icon icon="fluent:send-16-filled" color="#15a9e0" />
-                      <Icon icon="fluent:send-16-filled" color="#15a9e0" />
+                      <Icon icon="fluent:send-16-filled" color="#eabe6c" />
+                      <Icon icon="fluent:send-16-filled" color="#eabe6c" />
                     </div>
                   </h3>
                 </div>

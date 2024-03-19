@@ -171,7 +171,7 @@
 .site-breadcrumb {
   @extend %full-width;
   padding: 14px 0;
-  background-color: darken(#25292c, 2%);
+  background-color: #240A34;
   z-index: 0;
 
   &,
@@ -194,7 +194,7 @@
     font-weight: 600;
 
     &.orange-clr {
-      color: $primary;
+      color: $secondary;
     }
   }
 
@@ -215,7 +215,7 @@
 
   .mx-1.iconify {
     font-size: 90%;
-    color: #6d7578 !important;
+    color: #9771af !important
   }
 }
 
@@ -236,8 +236,8 @@
 }
 
 .page-title-airline {
-  background-color: #2C3134;
-  padding-top: 46px;
+  background-color: #15061f;
+  padding-top: 26px;
 
   @include mq("max", 1199px) {
     padding-top: 16px;
@@ -586,7 +586,7 @@ hr.hr-airline-als {
     }
 
     .offcanvas-header {
-      background: darken(#25292c, 2%);
+      background: #0d0810;
       color: $white;
       padding-left: 0;
       padding-right: 0;

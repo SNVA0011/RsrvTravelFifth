@@ -2,25 +2,24 @@
 @import "../../styles/mixins";
 
 .navDark {
-  background-color: #f4f6f8;
+  background-color: #240A34;
   padding-top: 13px;
-  padding-bottom: 13px;
-  border-bottom: solid 1px #e9ecf1;
+  padding-bottom: 13px; 
 
   a {
-    color: $charcoal;
+    color: $white;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 
     &:hover {
-      color: lighten($primary, 15%);
+      color: $secondary;
     }
   }
 
   .IconMini {
-    color: $primary;
+    color: $secondary;
     margin-right: 8px;
     font-size: 20px;
     position: relative;
@@ -40,11 +39,11 @@
 }
 
 .headerClassic {
-  background-color: #f4f6f8;
+  background-color: $white;
  
   &.FlightHeader {
     @include mq('min', 992px) {
-      background-color: #100f0e;
+      background-color: #1f0d2a;
     } 
     .SignInBtn { 
       height: 36px;
@@ -108,13 +107,7 @@
       }
     }
 
-    .currencyName {
-      @include mq('min', 992px) {
-        background-color:  lighten($secondary, 48%);;
-        @include css3(box-shadow, none);
-      }
-    }
-
+    
   }
 }
 
@@ -238,7 +231,7 @@ display: inline-block;
       &::after {
         content: "";
         height: 3px;
-        background: $primary;
+        background: $secondary;
         border-radius: 20px;
         position: absolute;
         top: 100%;
@@ -253,6 +246,7 @@ display: inline-block;
 
       &.NavbarLinkAct {
         font-weight: 700;
+        color: $primary;
       }
 
       &.NavbarLinkAct,
@@ -385,7 +379,7 @@ display: inline-block;
       right: 5px;
       position: absolute;
       border: 9px solid transparent;
-      border-bottom-color: $secondary;
+      border-bottom-color: $white;
     }
   }
 
@@ -414,7 +408,7 @@ display: inline-block;
       }
 
       .FlexGrowBtn {
-        color: lighten($secondary, 48%);
+        color: $primary;
       }
     }
 
@@ -441,7 +435,7 @@ display: inline-block;
   &::before {
     content: "";
     position: absolute;
-    background-color: lighten($secondary, 49%);
+    background-color: $primaryoff;
     width: 10%;
     height: 40%;
     -webkit-border-radius: 50%;
@@ -692,7 +686,7 @@ display: inline-block;
   line-height: normal;
 
   @include mq('min', 992px) {
-    background-color: $white;
+    background-color: $primaryoff;
     @include css3(box-shadow, 0px 1px 12px 1px rgb(0 0 0 / 6%));
   }
 

@@ -33,8 +33,8 @@ export const contactlist = [
   {
     headername: "Email",
     icon: '/images/email-footerico.png',
-    href: "mailto:support@reservationsdeal.in",
-    name: "support@reservationsdeal.in",
+    href: "mailto:support@brandname.in",
+    name: "support@brandname.in",
   },
   {
     headername: "Address",
@@ -59,10 +59,6 @@ export const FooterLinks = [
       {
         'title': 'FAQs',
         'url': '/faq'
-      },
-      {
-        'title': 'Airlines',
-        'url': '/airlines'
       }
     ]
   },
@@ -80,10 +76,6 @@ export const FooterLinks = [
       {
         'title': 'Contact Us',
         'url': '/contact-us'
-      },
-      {
-        'title': 'Cookies',
-        'url': '/cookies'
       } 
     ]
   },
@@ -93,13 +85,13 @@ export const FooterLinks = [
 export const headerUrl = {
   social: [
     {
-      title: "cs@travomint.com",
-      url: "mailto:cs@travomint.com",
+      title: "test@support.com",
+      url: "mailto:test@support.com",
       icon: "fluent:mail-24-filled",
     },
     {
-      title: "+91-1204814491",
-      url: "tel:+91-1204814491",
+      title: "+91-0000000000",
+      url: "tel:+91-0000000000",
       icon: "ph:phone-call-fill",
     },
   ],
@@ -111,18 +103,24 @@ export const headerUrl = {
       disable: false,
     },
     {
-      title: "Hotel",
-      url: "/#",
-      icon: "mdi:hotel",
+      title: "Blog",
+      url: "/blog",
+      icon: "material-symbols-light:post-add",
+      disable: false,
+    },
+    // {
+    //   title: "Hotel",
+    //   url: "/#",
+    //   icon: "mdi:hotel",
 
-      disable: true,
-    },
-    {
-      title: "Transfer",
-      url: "/#",
-      icon: "icon-park-outline:transfer", 
-      disable: true,
-    },
+    //   disable: true,
+    // },
+    // {
+    //   title: "Transfer",
+    //   url: "/#",
+    //   icon: "icon-park-outline:transfer", 
+    //   disable: true,
+    // },
     {
       title: "Contact",
       url: "/contact-us",

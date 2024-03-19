@@ -14,7 +14,7 @@ function FaqList({ content }) {
                 <Accordion.Item eventKey={index} key={index}>
                   <Accordion.Header className="d-flex justify-content-between">
                     <div className="question-ic d-inline-flex justify-content-center align-items-center align-self-start">
-                      <Icon icon="ph:question-light" color="#15a9e0" />
+                      <Icon icon="ph:question-light" color="#eabe6c" />
                     </div>
                     <div className="flex-grow-1 pe-2">{item.title}</div>
                     <Image

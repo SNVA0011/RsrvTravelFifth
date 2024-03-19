@@ -13,8 +13,8 @@ const privacyPolicy = () => {
   return (
     <>
       <PageHead
-        title={`ReservationsDeal - Aboutus`}
-        description={`Book here Cheap Flight tickets online,Low cost airfares and Get best discounted flight tickets at reservationsdeal.in`}
+        title={`BrandName - Aboutus`}
+        description={`Book here Cheap Flight tickets online,Low cost airfares and Get best discounted flight tickets at brandname.in`}
         keywords={`cheap flights,cheap flight tickets,Low cost flight tickets,Low Cost Airfare,Cheap Airfares,Discount flight tickets`}
       />
 
@@ -25,7 +25,7 @@ const privacyPolicy = () => {
           </li>
           <li className="mr-2">
             <span>
-              <Icon icon="mingcute:right-line" color="#15a9e0" />
+              <Icon icon="mingcute:right-line" color="#eabe6c" />
             </span>
           </li>
           <li>

@@ -43,7 +43,7 @@ const SelectedFilter = ({
               item2.value === item1 && (
                 <span key={i} className="me-2 mb-2 d-inline-block">
                   <Chip
-                    color='primary' style={{ backgroundColor: '#15a9e0', fontSize: '12px' }}
+                    color='primary' style={{ backgroundColor: '#eabe6c', fontSize: '12px' }}
                     label={item2.title}
                     onDelete={() => deleteFilter("stop", item1)}
                   />
@@ -58,7 +58,7 @@ const SelectedFilter = ({
               airl === air.value && (
                 <span key={ind} className="me-2 mb-2 d-inline-block">
                   <Chip
-                    color='primary' style={{ backgroundColor: '#15a9e0', fontSize: '12px' }}
+                    color='primary' style={{ backgroundColor: '#eabe6c', fontSize: '12px' }}
                     label={air.title}
                     onDelete={() => deleteFilter("airline", airl)}
                   />
@@ -73,7 +73,7 @@ const SelectedFilter = ({
               airl === air.value && (
                 <span key={ind} className="me-2 mb-2 d-inline-block">
                   <Chip
-                    color='primary' style={{ backgroundColor: '#15a9e0', fontSize: '12px' }}
+                    color='primary' style={{ backgroundColor: '#eabe6c', fontSize: '12px' }}
                     label={`${search.destinationAirport} : ${air.title}`}
                     onDelete={() => deleteFilter("arrivalTime", airl)}
                   />
@@ -88,7 +88,7 @@ const SelectedFilter = ({
               airl === air.value && (
                 <span key={ind} className="me-2 mb-2 d-inline-block">
                   <Chip
-                    color='primary' style={{ backgroundColor: '#15a9e0', fontSize: '12px' }}
+                    color='primary' style={{ backgroundColor: '#eabe6c', fontSize: '12px' }}
                     label={`${search.originAirport} : ${air.title}`}
                     onDelete={() => deleteFilter("departure", airl)}
                   />

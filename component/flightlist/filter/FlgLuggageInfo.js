@@ -392,13 +392,13 @@ const FlgLuggageInfo = ({
                   <li>Convenience Fee is non-refundable.</li>
                   <li>
                     Normal Cancellation : Airline cancellation penalty +
-                    Reservationsdeal service fee and Balance amount will be
+                    Brand Name service fee and Balance amount will be
                     refunded to the same bank account.
                   </li>
                   <li>
                     Flight Cancellation from Airlines end : Full Refund in the
                     same bank account after charging the applicable
-                    Reservationsdeal service Fee + payment gateway charges .
+                    Brand Name service Fee + payment gateway charges .
                   </li>
                   <li>
                     ConPlease Note: Cancellation terms and conditions are
@@ -411,7 +411,7 @@ const FlgLuggageInfo = ({
                   </li>
                 </ul>
                 <p>
-                  The airline fee is indicative. Reservationsdeal does not
+                  The airline fee is indicative. Brand Name does not
                   guarantee the accuracy of this information. All fees mentioned
                   are per passenger. Date change charges are applicable only on
                   selecting the same airline on a new date. The difference in

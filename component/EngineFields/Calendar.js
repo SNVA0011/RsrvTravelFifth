@@ -149,14 +149,14 @@ const Calendar = ({
                 <Icon
                   icon="formkit:date"
                   className="date"
-                  style={active === "DEP" ? { color: "#15a9e0" } : {}}
+                  style={active === "DEP" ? { color: "#891652" } : {}}
                 />
               </div>
               <div className="flex-grow-1 ps-2">
                 {GetstartDate}
                 <label
                   className="form-label"
-                  style={active === "DEP" ? { color: "#2a6baf" } : {}}
+                  style={active === "DEP" ? { color: "#a53e4c" } : {}}
                 >
                   Departure Date
                 </label>
@@ -174,14 +174,14 @@ const Calendar = ({
                     <Icon
                       icon="formkit:date"
                       className="date"
-                      style={active === "ret" ? { color: "#15a9e0" } : {}}
+                      style={active === "ret" ? { color: "#891652" } : {}}
                     />
                   </div>
                   <div className="flex-grow-1 ps-2">
                     {GetendDate}
                     <label
                       className="form-label"
-                      style={active === "ret" ? { color: "#2a6baf" } : {}}
+                      style={active === "ret" ? { color: "#a53e4c" } : {}}
                     >
                       Return Date
                     </label>
@@ -245,7 +245,7 @@ const Calendar = ({
                             selectedSecond === datecal
                             ? {
                               color: "white",
-                              backgroundColor: "#15a9e0",
+                              backgroundColor: "#891652",
                             }
                             : {};
                         const style3 =
@@ -323,7 +323,7 @@ const Calendar = ({
                             selectedSecond === datecal
                             ? {
                               color: "white",
-                              backgroundColor: "#15a9e0",
+                              backgroundColor: "#891652",
                             }
                             : {};
 

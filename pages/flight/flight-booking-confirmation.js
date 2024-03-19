@@ -56,7 +56,7 @@ const FlgBookingConfirm = () => {
   return (
     <>
       <PageHead
-        title={`Flight Booking Confirmation | ReservationsDeal`}
+        title={`Flight Booking Confirmation | BrandName`}
         description={``}
         keywords={``}
       />

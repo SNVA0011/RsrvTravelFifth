@@ -1,7 +1,7 @@
 // flightlisting
 .flgmodf-engine {
    @extend %full-width;
-   background-color: #221b15;
+   background-color:#15061f;
    padding: 27px 0;
 
    @include mq('max', 1199px) {
@@ -44,7 +44,7 @@
    
    .datearv .datearv-0::after{
       @include mq("max", 991px) {
-background: #2C3134;
+background: #15061f;
       }
    }
 
@@ -82,7 +82,7 @@ background: #2C3134;
 
    .engineexp-text {
       &.input-group {
-         background: rgb(0 0 0 / 35%);
+         background:  rgb(255 255 255 / 13%);
          @include css3('backdrop-filter', blur(4px));
       }
 
@@ -752,7 +752,7 @@ background: #2C3134;
             margin-left: -11px;
             left: 100%;
             background: $secondary;
-            border-left: solid 10px #15a9e0;
+            border-left: solid 10px $secondary;
             @include css3('transform', skewX(23deg));
             @include css3('transform-origin', bottom);
          }

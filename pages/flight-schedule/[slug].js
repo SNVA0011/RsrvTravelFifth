@@ -126,8 +126,8 @@ const Slug = ({ airline, desitnation, desitinationDeta }) => {
                     <span className="d-inline-block">
                       {desitinationDeta[0].heading}
                       <div className="fluent-inline ms-3">
-                        <Icon icon="fluent:send-16-filled" color="#15a9e0" />
-                        <Icon icon="fluent:send-16-filled" color="#15a9e0" />
+                        <Icon icon="fluent:send-16-filled" color="#eabe6c" />
+                        <Icon icon="fluent:send-16-filled" color="#eabe6c" />
                       </div>
                     </span>
                   </h3>
@@ -195,11 +195,11 @@ const Slug = ({ airline, desitnation, desitinationDeta }) => {
                     <p>
                       Whenever you plan for a trip, just log on to the page,{" "}
                       <Link
-                        href="http://www.reservationsdeal.in"
+                        href="http://www.brandname.in"
                         target="_blank"
                       >
                         <a className="fw-semibold">
-                          http://www.reservationsdeal.in
+                          http://www.brandname.in
                         </a>
                       </Link>{" "}
                       and find out everything you need for a comfortable yet
@@ -235,7 +235,7 @@ const Slug = ({ airline, desitnation, desitinationDeta }) => {
                           Delhi Airport Contact Info{" "}
                           <Icon
                             icon="ph:airplane-takeoff-thin"
-                            color="#15a9e0"
+                            color="#eabe6c"
                             className="airplane-hm"
                           />
                         </h3>
@@ -288,7 +288,7 @@ const Slug = ({ airline, desitnation, desitinationDeta }) => {
                             Mumbai Airport Contact Info{" "}
                             <Icon
                               icon="ph:airplane-takeoff-thin"
-                              color="#15a9e0"
+                              color="#eabe6c"
                               className="airplane-hm"
                             />
                           </h3>

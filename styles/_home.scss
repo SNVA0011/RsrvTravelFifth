@@ -216,17 +216,17 @@ img.airhostess-with-belt {
   .mini-description {
     color: $charcoal;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0;
   }
 
   .paragraph-des {
     color: $davgray;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    margin-top: 12px;
+    margin-top: 6px;
   }
 
   .content-body {
@@ -276,8 +276,7 @@ img.airhostess-with-belt {
 }
  
 .error-font-15 {
-  font-size: 15px;
-  background: #fff6f7;
+  font-size: 15px; 
   padding: 16px 6px;
   border-radius: 8px;
   @include mq('max', 575px) {

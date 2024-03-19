@@ -9,7 +9,7 @@ import FaqList from "../component/common/FaqList";
 const privacyPolicy = () => {
   return <>
     <PageHead
-      title={`ReservationsDeal - FAQ`}
+      title={`BrandName - FAQ`}
       description={``}
       keywords={``}
     />
@@ -21,7 +21,7 @@ const privacyPolicy = () => {
         </li>
         <li className="mr-2">
           <span>
-            <Icon icon="mingcute:right-line" color="#15a9e0" />
+            <Icon icon="mingcute:right-line" color="#eabe6c" />
           </span>
         </li>
         <li>
@@ -40,24 +40,11 @@ const privacyPolicy = () => {
 
         <FaqList content={[
           {
-            "title": "How to make a booking with ReservationsDeal?",
-            "paragraph": `<div class="tab-content">
-<p>Ans: Booking the flight for your desired destination is really short and simple. All you have to do is
-visit www.reservationsdeal.in and use our filters to find the best flight possible on the date you have
-chosen to travel. If you find any problem in searching your flight destination or have any further query
-before booking a flight, you can call us at one of our executive for assistance on 1-878-847-0037</p>
-</div>` },
-          {
             "title": "How do I get to know if my booking is confirmed?",
             "paragraph": `<div class="tab-content">
 <p>Ans: As your booking is confirmed, you will receive an e-mail from us containing all the details
 either in your inbox or in the spam box within 4 hours. Still, if you do not find the confirmation mail,
 please contact us.</p>
-</div>` },
-          {
-            "title": "Will there be any charges of booking my flight tickets from phone?",
-            "paragraph": `<div class="tab-content">
-<p>Ans: No. ReservationsDeal do not charge anything to book over the phone.</p>
 </div>` },
           {
             "title": "I have not received my tickets yet. What is the procedure to get the tickets as soon as possible?",
@@ -67,12 +54,6 @@ e-ticket then you can get your ticket from the airline desk at the airport where
 show the necessary documents along with confirmation mail in printout.</p>
 </div>
 ` },
-          {
-            "title": "What is the procedure of getting an E-Ticket?",
-            "paragraph": `<div class="tab-content">
-<p>Ans:You can go for an E-ticket while booking your flight with ReservationsDeal and you will get one as
-soon as possible. E-Ticket are more effective and secured in terms of misplace, torn apart or lost.</p>
-</div>` },
           {
             "title": "Where can I find my terminal and airline details of flight?",
             "paragraph": `<div class="tab-content">

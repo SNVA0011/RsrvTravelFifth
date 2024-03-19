@@ -16,13 +16,13 @@ const AboutDescription = () => {
             />
             <ul className="bullets-abtdis text-center">
               <li>
-                <Icon icon="ph:check-bold" color="#15a9e0" /> Flights
+                <Icon icon="ph:check-bold" color="#eabe6c" /> Flights
               </li>
               <li>
-                <Icon icon="ph:check-bold" color="#15a9e0" /> Hotels
+                <Icon icon="ph:check-bold" color="#eabe6c" /> Hotels
               </li>
               <li>
-                <Icon icon="ph:check-bold" color="#15a9e0" /> Packages
+                <Icon icon="ph:check-bold" color="#eabe6c" /> Packages
               </li>
             </ul>
             <div className="stylereuse-1">
@@ -49,40 +49,20 @@ const AboutDescription = () => {
                 air tickets
               </h4>
               <p>
-                We're driven by new technological trends, years of experience,
-                and the willingness to serve the passengers as per their exact
-                needs. Being the pioneer of the online travel industry, we have
-                come up with a new revolution for millions of people who travel
-                a lot or aspire to travel. Here, at ReservationsDeal, we aim in
-                the ticket or hotel booking process easier and less
-                time-consuming. A team of dedicated professionals is putting
-                tremendous efforts in changing the scenario of the current phase
-                of the travel industry.
+              Lorem ipsum dolor sit amet consectetur. Eu egestas quam faucibus felis dui sed. Mauris dui elementum in cursus consequat eu lobortis lacus. Semper ut lacinia vitae aliquam vulputate
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
               </p>
               <p>
-                Each member of this team is highly experienced and hired after
-                numerous stages of skill analysis. They are sufficiently trained
-                and keep up-to-date knowledge about the recent trends of the
-                aviation industry. We're engaged in dealing with the leading
-                airlines, budget hotels, easy-to-reach resorts, cheap cruises,
-                and local transport facilities. To do this job in a better way,
-                we develop all our offered services in adherence to the exact
-                need of our valued patrons. Plus, we have tied up with the
-                leading airlines, budget hotels, easy-to-reach resorts, cheap
-                cruises, and local transport facilities.
+              Lorem ipsum dolor sit amet consectetur. Eu egestas quam faucibus felis dui sed. Mauris dui elementum in cursus consequat eu lobortis lacus. Semper ut lacinia vitae aliquam vulputate
+
+
               </p>
-              <p>
-                As ReservationsDeal is engaged in making the trips affordable
-                and user-friendly, we assure that our deals are cheaper than the
-                deals introduced by most of the travel websites. Our discount
-                offers are unparalleled and will surprise you if you are not
-                familiar with them. It has been our consistent priority to
-                delight the passengers with special offers and seasonal
-                discounts every single occasion. We connect up-to-the-minute
-                technology and the finest minds of the aviation industry, and it
-                is giving us the freedom to serve the passengers in the way we
-                planned to do it.
-              </p>
+              
             </div>
           </Col>
         </Row>

@@ -30,7 +30,7 @@ export default function Slug({ blogdata, pagenumber, allblog }) {
   if (location.isFallback) {
     return (
       <>
-        <PageHead title="ReservationsDeal" description="" keywords="" />
+        <PageHead title="BrandName" description="" keywords="" />
 
         <div className="wf-100 text-center full-w my-5 py-5">
           <div className="my-5 py-5">

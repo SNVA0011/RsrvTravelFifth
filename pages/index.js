@@ -4,12 +4,9 @@ import RecentSearch from '../component/RecentSearch'
 import AdventureStarts from '../component/AdventureStarts/AdventureStarts'
 import ExploreSearch from '../component/ExploreSearch'
 import TopAirlineDeal from '../component/TopAirlineDeal'
-import FlightOfferDl from '../component/FlightOfferDl'
-import PopularRoutes from '../component/PopularRoutes/PopularRoutes'
-import PartnerBrands from '../component/PartnerBrands/PartnerBrands'
+import FlightOfferDl from '../component/FlightOfferDl'  
 import LatestBlogs from '../component/LatestBlogs'
-import DownloadApp from '../component/DownloadApp'
-import ExploreTravel from '../component/ExploreTravel' 
+import ExploreTravel from '../component/ExploreTravel'
 import { Hostname, siteid } from '../utils/static'
 import { getApiData } from './api/GetApiResp'
 
@@ -21,7 +18,7 @@ const index = ({ allblog }) => {
   return (
     <>
       <PageHead
-        title={`ReservationsDeal : Hotels, Vacations & Travel Deals`}
+        title={`BrandName : Hotels, Vacations & Travel Deals`}
         description={`Book Tickets, luxury hotels tickets with best deals from your destinations & Get Best Price Guarantee @ ${Hostname}`}
         keywords={`${Hostname}, Hotels, Travel Deals`}
       />
@@ -32,18 +29,12 @@ const index = ({ allblog }) => {
         Title="Top / Recent Searches"
         Routes={[
           { 'from': 'DEL', 'to': 'BOM', 'date': '28 Nov 2023', 'traveller': 'A-1 C-1 I-1, Economy', 'thumbnail': 'recent-search-1.webp', },
-           { 'from': 'DEL', 'to': 'GOI', 'date': '28 Nov 2023', 'traveller': 'A-1 C-1 I-1, Economy', 'thumbnail': 'recent-search-2.webp', },
-            { 'from': 'DEL', 'to': 'NYC', 'date': '28 Nov 2023', 'traveller': 'A-1 C-1 I-1, Economy', 'thumbnail': 'recent-search-3.webp', },
+          { 'from': 'DEL', 'to': 'GOI', 'date': '28 Nov 2023', 'traveller': 'A-1 C-1 I-1, Economy', 'thumbnail': 'recent-search-2.webp', },
+          { 'from': 'DEL', 'to': 'NYC', 'date': '28 Nov 2023', 'traveller': 'A-1 C-1 I-1, Economy', 'thumbnail': 'recent-search-3.webp', },
         ]}
       />
 
-      <AdventureStarts
-        Title={"The Adventure starts today!"}
-        SubTitle={"We are trusted around the World!"}
-        BtnTitle={"Book Now"}
-      />
-
-
+    
       <ExploreSearch
         Title="Explore Top Searches"
         Routes={[
@@ -59,6 +50,14 @@ const index = ({ allblog }) => {
         ]}
       />
 
+<AdventureStarts
+        Title={"The Adventure starts today!"}
+        SubTitle={"We are trusted around the World!"}
+        BtnTitle={"Book Now"}
+      />
+
+
+
 
       <FlightOfferDl
         Title="Flight Offer Deals"
@@ -67,43 +66,19 @@ const index = ({ allblog }) => {
         ]}
       />
 
-
-      <PopularRoutes
-        Title="Popular Domestic Route"
-        Routes={[
-          { 'thumbnail': 'popular-rtdom-1.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'DEL', 'to': 'BOM', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtdom-2.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'DEL', 'to': 'IXJ', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtdom-3.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'BOM', 'to': 'PAT', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtdom-4.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'DEL', 'to': 'UDR', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtdom-5.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'IXJ', 'to': 'IXD', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtdom-6.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'UDR', 'to': 'BHJ', 'class': 'Economy', 'price': '$ 3574', },
-        ]}
-      />
+ 
 
       <div className='overflow-hidden'>
-      <PopularRoutes
-        Title="Popular International Route"
-        Routes={[
-          { 'thumbnail': 'popular-rtint-1.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'DEL', 'to': 'LCY', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtint-2.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'DEL', 'to': 'NYC', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtint-3.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'BOM', 'to': 'PAR', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtint-4.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'DEL', 'to': 'MAD', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtint-5.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'IXJ', 'to': 'SIN', 'class': 'Economy', 'price': '$ 3574', }, { 'thumbnail': 'popular-rtint-6.webp', 'date': '02 Dec 2023 - 06 Dec 2023', 'from': 'UDR', 'to': 'GPA', 'class': 'Economy', 'price': '$ 3574', },
-        ]}
-        SecondTab={true}
-      />
+    
 
+        <LatestBlogs
+          Title="Blogs"
+          ViewALLBtn={'/blog'}
+          BlogsItems={blogFouritem}
+          error={`Sorry ! No blogs items found`}
+        />
 
-      <DownloadApp
-        Title={'Download Travomint App Now!'}
-        SubTitle={<>Use code <span>TRAVOMINT</span> and get <span>FLAT 15%</span> off* on your first domestic flight booking</>}
-        AppTitle={<>Experience a fresh way to manage <span>flight booking!</span></>}
-        PlayStoreUrl="https://play.google.com/store/search?q="
-        AppleStoreUrl="https://apps.apple.com/in/app/"
-      />
-
-
-      <LatestBlogs
-        Title="Blogs"
-        ViewALLBtn={'/blog'}
-        BlogsItems={blogFouritem}
-        error={`Sorry ! No blogs items found`}
-      />
-
-      <PartnerBrands BrandsImage={[
-        'sabre-brand.webp', 'iata-brand.webp', 'sabre-brand.webp', 'iata-brand.webp', 'sabre-brand.webp', 'iata-brand.webp', 'sabre-brand.webp', 'iata-brand.webp',
-      ]} />
+ 
       </div>
 
 

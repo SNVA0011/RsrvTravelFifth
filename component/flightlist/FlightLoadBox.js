@@ -30,7 +30,7 @@ const FlightLoadBox = ({ search }) => {
             <>
               <Icon
                 icon="ph:arrow-right-thin"
-                color="#15a9e0"
+                color="#eabe6c"
                 className="thin"
               />{" "}
               {moment(search.toDate).format("DD MMM, YYYY")}

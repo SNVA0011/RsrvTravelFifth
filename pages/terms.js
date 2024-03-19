@@ -9,7 +9,7 @@ import { Container } from "react-bootstrap";
 const terms_conditions = () => {
   return <>
     <PageHead
-      title={`Reservationsdeal - Term & Conditions`}
+      title={`BrandName - Term & Conditions`}
       description={``}
       keywords={``}
     />
@@ -21,7 +21,7 @@ const terms_conditions = () => {
         </li>
         <li className="mr-2">
           <span>
-            <Icon icon="mingcute:right-line" color="#15a9e0" />
+            <Icon icon="mingcute:right-line" color="#eabe6c" />
           </span>
         </li>
         <li>
@@ -38,8 +38,8 @@ const terms_conditions = () => {
           <h2 className="text-center">Terms & Conditions</h2>
 
           <h3>Introduction</h3>
-          <p>We recommend you to carefully review the Terms and Conditions before using the Reservationsdeal website. You must agree with the terms and conditions when you use reservationsdeal, and if you don't, you can be denied access to the website, for which you will not be allowed for the booking as well. In the mentioned terms and conditions, "we", "us," and "our" are referred to Reservationsdeal, and "you" and "your" is referred to the user of our website or you.</p>
-          <p>All communications regarding your booking or customer service need to be sent to Reservationsdeal (SNVA LLC) 2 INDUSTRIAL PARK DR, Waldorf, MD 20602, United States. You might drop an email to:support@reservationsdeal.in. <Link href="mailto:support@reservationsdeal.in" target="_blank"><a className="text-decoration-underline">support@reservationsdeal.in</a></Link></p>
+          <p>We recommend you to carefully review the Terms and Conditions before using the BrandName website. You must agree with the terms and conditions when you use BrandName, and if you don't, you can be denied access to the website, for which you will not be allowed for the booking as well. In the mentioned terms and conditions, "we", "us," and "our" are referred to BrandName, and "you" and "your" is referred to the user of our website or you.</p>
+          <p>All communications regarding your booking or customer service need to be sent to BrandName (SNVA LLC) 2 INDUSTRIAL PARK DR, Waldorf, MD 20602, United States. You might drop an email to:support@BrandName.in. <Link href="mailto:support@BrandName.in" target="_blank"><a className="text-decoration-underline">support@BrandName.in</a></Link></p>
 
 
           <h3>Booking</h3>

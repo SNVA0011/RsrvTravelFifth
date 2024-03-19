@@ -51,8 +51,8 @@ const LatestBlogs = ({ Title, BlogsItems, ViewALLBtn, error }) => {
 
                     </Row>
                         :
-                        <div className='pt-3 pb-2'>
-                        <div className="text-danger fw-semibold error-font-15 mb-5 pn-5 text-center"><Icon icon="material-symbols:error-outline" /> {error}</div>
+                        <div className='pt-3'>
+                        <div className="text-danger fw-semibold error-font-15 pn-5 text-center"><Icon icon="material-symbols:error-outline" /> {error}</div>
                         </div>
                     }
 

@@ -16,7 +16,7 @@ const DownloadOurApp = () => {
                       <Link href={'#'}><a  target='_blank' className='ripple-wv d-inline-block'><img src='/images/getit-appstore.png' alt='getit-appstore' className='getit-appstore' /></a></Link>
                     </Col>
                     <Col xs={6}>
-                      <Link href={'https://play.google.com/store/apps/details?id=com.snva.ReservationsDeal&pli=1'}><a  target='_blank' className='ripple-wv d-inline-block'><img src='/images/getit-google.png' alt='getit-google' className='getit-google' /></a></Link>
+                      <Link href={'#'}><a  target='_blank' className='ripple-wv d-inline-block'><img src='/images/getit-google.png' alt='getit-google' className='getit-google' /></a></Link>
                     </Col>
                 </Row>
             </div>

@@ -10,7 +10,7 @@ const contact = () => {
   return (
     <>
       <PageHead
-        title={`ReservationsDeal - ContactUs`}
+        title={`BrandName - ContactUs`}
         description={``}
         keywords={``}
       />
@@ -22,7 +22,7 @@ const contact = () => {
           </li>
           <li className="mr-2">
             <span>
-              <Icon icon="mingcute:right-line" color="#15a9e0" />
+              <Icon icon="mingcute:right-line" color="#eabe6c" />
             </span>
           </li>
           <li>
@@ -94,9 +94,9 @@ const contact = () => {
                       <div className="contact-info-text">
                         <a
                           className="email-us"
-                          href="mailto:support@reservationsdeal.in"
+                          href="mailto:support@brandname.in"
                         >
-                          support@reservationsdeal.in
+                          support@brandname.in
                         </a>
                       </div>
                     </div>

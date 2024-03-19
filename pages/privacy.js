@@ -8,7 +8,7 @@ import { Container } from "react-bootstrap";
 const privacyPolicy = () => {
   return <>
     <PageHead
-      title={`ReservationsDeal - Privacy Policy`}
+      title={`BrandName - Privacy Policy`}
       description={``}
       keywords={``}
     />
@@ -20,7 +20,7 @@ const privacyPolicy = () => {
         </li>
         <li className="mr-2">
           <span>
-            <Icon icon="mingcute:right-line" color="#15a9e0" />
+            <Icon icon="mingcute:right-line" color="#eabe6c" />
           </span>
         </li>
         <li>
@@ -35,7 +35,7 @@ const privacyPolicy = () => {
       <Container className="spcmy-60">
         <div className="content-ullist">
           <h2 className="text-center">Privacy Policy Statement</h2>
-          <p>At reservationsdeal we respect the privacy of our customers and we take every measure to secure the details of our users. In this privacy policy section, we inform you how we collect, use and disclose the information, and keep it secured and restricted for our usage; while using our platform. Go through the privacy policy before using our website. We recognize and acknowledge the importance of your personal data and are committed to respecting your privacy and protecting your personal information.</p>
+          <p>At BrandName we respect the privacy of our customers and we take every measure to secure the details of our users. In this privacy policy section, we inform you how we collect, use and disclose the information, and keep it secured and restricted for our usage; while using our platform. Go through the privacy policy before using our website. We recognize and acknowledge the importance of your personal data and are committed to respecting your privacy and protecting your personal information.</p>
 
           <h3>1. What information do we collect and why?</h3>
           <p>We need to collect, use and disclose personal information to perform our duties as a travel agent, namely, making and managing travel bookings on behalf of our customers. During the course of our relationship we may collect the following:</p>
@@ -111,7 +111,7 @@ const privacyPolicy = () => {
             <li>Request that we delete your personal data if there is no compelling reason for its continued processing</li>
             <li>Request that we remove your consent</li>
           </ol>
-          <p>If you wish to exercise any of the above rights, please contact us on <Link  href="mailto:support@reservationsdeal.in" target="_blank"><a className="text-decoration-underline">support@reservationsdeal.in</a></Link> providing details of your request.</p>
+          <p>If you wish to exercise any of the above rights, please contact us on <Link  href="mailto:support@BrandName.in" target="_blank"><a className="text-decoration-underline">support@BrandName.in</a></Link> providing details of your request.</p>
           <p>If you are dissatisfied with our data processing activities, you have the right to complain to the concerned authorities.</p>
 
 

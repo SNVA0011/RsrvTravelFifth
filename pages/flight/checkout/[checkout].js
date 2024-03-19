@@ -200,7 +200,7 @@ const Checkout = () => {
   return (
     <>
       <PageHead
-        title={`Book Cheap Flights at ReservationsDeal`}
+        title={`Book Cheap Flights at BrandName`}
         description={``}
         keywords={``}
       />

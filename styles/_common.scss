@@ -171,15 +171,15 @@ input[type="number"] {
   }
 
   input:checked+.label {
-    border-color: $primary;
+    border-color: $secondary;
 
     &::after {
-      background: $primary;
+      background: $secondary;
     }
   }
 
   input:checked+.label+.radiocustom-text {
-    color: $primary; 
+    color: $secondary; 
   }
 
   input:checked+.label:after {
@@ -212,7 +212,7 @@ input[type="number"] {
     margin-right: 16px;
     width: 16px;
     height: 16px;
-    border: 1px solid $davgray;
+    border: 1px solid $white;
     border-radius: 100%;
 
     &:after {
@@ -223,7 +223,7 @@ input[type="number"] {
       width: 8px;
       height: 8px;
       border-radius: 100%;
-      background: $davgray;
+      background: $white;
       @include css3('transition', all 0.2s);
       pointer-events: none;
     }
@@ -717,7 +717,7 @@ input[type="number"] {
     }
 
     p {
-      color: $primary; 
+      color: $secondary; 
       margin: 0;
     }
 
@@ -853,7 +853,7 @@ input[type="number"] {
 .travellers-class {
   .btn.btn-site.applyBtn {
     &:hover {
-      background-color: lighten($secondary, 47%);
+      background-color: lighten($primary, 65%);
     }
   }
 }
@@ -1262,7 +1262,7 @@ input[type="number"] {
         }
   
         .country.highlight {
-            background-color: $secondary;
+            background-color: #240A34;
             color: $white;
   
             .dial-code {
@@ -1270,8 +1270,8 @@ input[type="number"] {
             }
   
             .flag {
-                background-color: darken($secondary, 10%);
-                @include css3('box-shadow', 0px 2px 0 1px darken($secondary, 10%));
+                background-color: lighten(#240A34, 10%);
+                @include css3('box-shadow', 0px 2px 0 1px lighten(#240A34, 10%));
             }
         }
   

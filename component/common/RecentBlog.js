@@ -15,9 +15,7 @@ const RecentBlog = ({ blog, path, searplaceholder, socialUrl }) => {
         return (
             item.replace(re, '<b>' + keyword + '</b>')
         )
-    }
-
-    
+    } 
   const removeHtml = (string) => {
     const regex = /(<([^>]+)>)/gi;
     const newString = string.replaceAll(regex, " ");
@@ -27,7 +25,7 @@ const RecentBlog = ({ blog, path, searplaceholder, socialUrl }) => {
     useEffect(() => {
         setblogName("")
     }, [location.asPath]);
-
+ 
     return (
         <>
 
@@ -78,13 +76,13 @@ const RecentBlog = ({ blog, path, searplaceholder, socialUrl }) => {
                                                     <div className="blog-lts-thumbnail">
                                                         <div className="flgofferover-hide">
                                                             <div className="flgoffer-cover-rt"
-                                                             style={{ backgroundImage: `url(/images/${item.imgUrl === null || item.imgUrl  === '' ? 'inflight-aircraft-sm.png' : item.imgUrl})` }}></div>
+                                                             style={{ backgroundImage: `url(${item.imgUrl === null || item.imgUrl  === '' ? '/images/inflight-aircraft-sm.png' : item.imgUrl})` }}></div>
                                                         </div>
                                                     </div>
 
                                                     <div className="content-body">
                                                         <p className="mini-description" dangerouslySetInnerHTML={{ __html: item.title }}></p>
-                                                        <div className="paragraph-des d-lg-none" dangerouslySetInnerHTML={{ __html: removeHtml(item.content).substring(0, 120) + "..." }}></div>
+                                                        <div className="paragraph-des" dangerouslySetInnerHTML={{ __html: removeHtml(item.content).substring(0, 120) + "..." }}></div>
 
                                                     </div>
                                                 </a>

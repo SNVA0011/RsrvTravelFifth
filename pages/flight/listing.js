@@ -69,7 +69,7 @@ const Listing = () => {
   return (
     <>
       <PageHead
-        title={`Flight Listing : ReservationsDeal`}
+        title={`Flight Listing : BrandName`}
         description={``}
         keywords={``}
       />
