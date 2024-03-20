@@ -1,0 +1,44 @@
+@import "../../styles/variable";
+@import "../../styles/mixins";
+ 
+.HighlightsBlock{ 
+  padding: 0 0 40px;
+  margin-top: 20px;
+}
+ .HighlightsImg{
+    height: 55px;
+ }
+ .HighlightsThumb{
+    margin-bottom: 24px;
+ }
+
+.HighlightsTitle{
+    font-size: 18px;
+    color: #240A34;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.HighlightsDes{
+    font-size: 14px;
+    color: #5d646d;
+    line-height: 1.8;
+}
+
+ .HighlightsCard{ 
+ padding: 30px;
+ background-color: #fbfbfb;
+ -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+         border-radius: 25px;
+ height: 100%;
+ border: solid 1px transparent;
+ @include css3(transition, all 200ms ease); 
+
+ &:hover{
+    border-color: $primary;
+    @include css3(transform, scale(1.04)); 
+
+ }
+ }

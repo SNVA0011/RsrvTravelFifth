@@ -2,32 +2,35 @@
 @import "../../styles/mixins";
 
 .TopAirlineWave {
-    @include bgPath('top-airline-lgred.webp'); 
+    @include bgPath('top-airline-lgred.webp');
     background-position: bottom center;
     background-repeat: no-repeat;
     width: 100%;
     height: 85px;
     background-size: 100%;
+
     @include mq('max', 991px) {
         height: 68px;
         margin-top: 12px;
     }
+
     @include mq('max', 767px) {
         height: 40px;
         margin-top: -12px;
     }
-    @include mq('max', 575px) { 
+
+    @include mq('max', 575px) {
         margin-top: -22px;
     }
 }
 
 .TopAirlineBlock {
     position: relative;
-    padding: 40px 0 60px;
+    padding: 40px 0 0px;
 
     &::before {
         content: '';
-        background-color: $primaryoff;
+        background-color: #fff5ea;
         width: 100%;
         height: 228px;
         position: absolute;
@@ -39,14 +42,15 @@
 .TopAirlineCard,
 .TopAirlineCard::before,
 .TopAirlineCard::after,
-.TopAirlineDept::before { 
-    @include css3(transition, all 0.4s cubic-bezier(0.5, 0, 0, 1.25)); 
+.TopAirlineDept::before {
+    @include css3(transition, all 0.4s cubic-bezier(0.5, 0, 0, 1.25));
 }
 
 .TopAirlineCard {
-    border-radius: 10px;
-    background: $white;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+    @include bgPath('airline-round-wv.png'); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     padding: 10px;
     cursor: pointer;
     position: relative;
@@ -57,6 +61,30 @@
     -ms-user-select: none;
     -o-user-select: none;
     z-index: 0;
+    height: 160px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
 
     &::before {
         content: '';
@@ -82,24 +110,22 @@
     }
 
     &:hover {
-        @include css3(transform, scale(1.07));  
-        @include css3( box-shadow, 0 25px 50px -12px rgb(0 0 0 / 19%)); 
-
+        @include css3(transform, scale(1.07)); 
 
         &::before {
             width: 100%;
         }
 
         &::after {
-            top: -25px;
-            right: -25px;
-            width: 50px;
-            height: 50px;
-            box-shadow: 0 0 0px 6px lighten($primary, 40%), 0 0 0px 12px lighten($primary, 45%);
-            -o-box-shadow: 0 0 0px 6px lighten($primary, 40%), 0 0 0px 12px lighten($primary, 45%);
-            -ms-box-shadow: 0 0 0px 6px lighten($primary, 40%), 0 0 0px 12px lighten($primary, 45%);
-            -moz-box-shadow: 0 0 0px 6px lighten($primary, 40%), 0 0 0px 12px lighten($primary, 45%);
-            -webkit-box-shadow: 0 0 0px 6px lighten($primary, 40%), 0 0 0px 12px lighten($primary, 45%);
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            box-shadow: 0 0 0px 8px lighten($primary, 50%), 0 0 0px 16px lighten($primary, 60%);
+            -o-box-shadow: 0 0 0px 8px lighten($primary, 50%), 0 0 0px 16px lighten($primary, 60%);
+            -ms-box-shadow: 0 0 0px 8px lighten($primary, 50%), 0 0 0px 16px lighten($primary, 60%);
+            -moz-box-shadow: 0 0 0px 8px lighten($primary, 50%), 0 0 0px 16px lighten($primary, 60%);
+            -webkit-box-shadow: 0 0 0px 8px lighten($primary, 50%), 0 0 0px 16px lighten($primary, 60%);
         }
 
         .TopAirlineDept::before {
@@ -151,14 +177,7 @@
 
 
 .TopAirlineRow {
-    margin: 0 -15px;
-      @include mq('max', 1299px) {
-        margin: 0 -12px;
-    }
-
-    @include mq('max', 1299px) {
-        margin: 0 -10px;
-    } 
+    margin: 0 -6px;
     @include mq('max', 1199px) {
         @include scrollHorizontal;
         padding-top: 60px;
@@ -167,88 +186,31 @@
         margin-bottom: -30px;
         position: relative;
     }
-    @include mq('max', 575px) {
-        margin-left: -8px;
-        margin-right: -8px;
-    }
 }
 
 .TopAirlineCol {
-    padding: 0 15px;
-       @include mq('max', 1299px) {
-        padding: 0 12px;
-    }
-
-    @include mq('max', 1299px) {
-        padding: 0 10px;
-    }
+    padding: 0 6px;
+    @include columnGrid(12.5%);
     @include mq('max', 1199px) {
         @include columnGrid(190px);
-    }
-    @include mq('max', 575px) {
-        padding: 0 8px;
     }
 }
 
 
 .TopAirlineThumb {
-    position: relative;
-    height: 30px;
-    z-index: 0;
-    background-color: $white;
-    -webkit-box-shadow: 0 0 0 10px #fff;
-    -moz-box-shadow: 0 0 0 10px #fff;
-    box-shadow: 0 0 0 10px #fff;
-}
-
-.TopAirlineGrow {
-    margin: 20px 0;
-    position: relative;
-    padding-left: 16px;
-}
-
-.TopAirlinePrice {
-    color: $primary;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    -webkit-animation-duration: 320ms;
-    animation-duration: 320ms;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    @include mq('max', 1199px) {
-        font-size: 18px;
-      }
-    @include mq('max', 991px) {
-        font-size: 17px;
-      }
-}
-
-.TopAirlineDept {
-    color: $charcoal;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    position: relative;
-    @include mq('max', 1199px) {
-        font-size: 15px;
-      } 
-
-    &::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        border-radius: 50px;
-        background-color: #A5A5A5;
-        position: absolute;
-        left: -16px;
-        top: 7px;
-        z-index: 2;
+    position: relative; 
+    z-index: 0; 
+    width: 100%;
+    padding: 0 10px;
+    img{
+        max-height: 52px;
+        height: auto;
+        min-height: auto;
     }
 }
+ 
 
+ 
 .TopAirDeptFirst {
     &::after {
         content: "";
@@ -258,28 +220,41 @@
         position: absolute;
         left: -13px;
         top: 9px;
+
         @include mq('max', 767px) {
             height: 71px;
-          }
+        }
+
         @include mq('max', 575px) {
             height: 66px;
-          }
+        }
     }
 }
 
+ 
 
-.TopAirlineDate {
-    color: $lightgray;
-    font-size: 12px;
-    font-style: normal;
+
+.TopAirlineSub {
+    margin-top: -40px;
+    margin-bottom: 40px;
+    padding-top: 8px;
+    color: $primary;
     font-weight: 500;
-    line-height: normal;
-    margin: 20px 0;
-    @include mq('max', 767px) {
-        font-size: 11px; 
-        margin: 18px 0;
-      }
-    @include mq('max', 575px) { 
-        margin: 16px 0;
-      }
+    max-width: 300px;
+    font-size: 14px;
+
+    @include mq('max', 1399px) {
+        margin-top: -35px;
+        margin-bottom: 35px;
+    }
+
+    @include mq('max', 1299px) {
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    @include mq('max', 1199px) {
+        margin-top: -28px;
+        margin-bottom: 28px;
+    }
 }

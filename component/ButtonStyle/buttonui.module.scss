@@ -1,5 +1,6 @@
 @import "../../styles/variable";
 @import "../../styles/mediaprefix";
+ 
 
 .FlightOfdealBtn {
     font-size: 16px;
@@ -9,12 +10,14 @@
     height: 50px;
     padding-left: 30px;
     padding-right: 30px;
-    border-radius: 10px; 
-    position: relative; 
-    overflow: hidden; 
-      @include mq('max', 991px) {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+    @include mq('max', 991px) {
         font-size: 15px;
-      }
+    }
+
     &:after {
         content: '';
         position: absolute;
@@ -25,31 +28,48 @@
         background-color: rgba(255, 255, 255, 0.50);
         -webkit-transition: none;
         -moz-transition: none;
-        transition: none; 
+        transition: none;
         @include css3('transform', skewX(-20deg));
         @include css3('transform-origin', top left);
-        @include css3('filter', blur(4px));  
-    } 
+        @include css3('filter', blur(4px));
+    }
+
     &:hover:after {
         width: 150%;
-        background-color: rgba(255, 255, 255, 0); 
+        background-color: rgba(255, 255, 255, 0);
         -webkit-transition: all 0.4s ease-in-out;
         -moz-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out;
         @include css3('transition-delay', 0.12s);
     }
+
     &.OutlineClr {
         border-color: $primary;
-        color: $white; 
+        color: $primary;
+
         &:hover,
-        &:active,
-        &:focus {
-            background-color: $primary;
+        &:active {
+            background-color: lighten($primary, 62%);
+            color: $primary;
         }
     }
 
     &.FillClr {
         background-color: $primary;
-        border-color: $primary;  
+        border-color: $primary;
     }
+
+
+    &.SubsCrbBtn {
+        margin-top: 16px;
+        color: $secondary;
+        border-color: $secondary;
+        font-weight: 600;
+        &:hover,
+        &:active {
+            background-color: $secondary;
+            color: $primary;
+        }
+    }
+
 }

@@ -5,11 +5,19 @@ import Link from 'next/link'
 import { FooterLinks, WhiteBrandLogo } from '../../utils/static'
 import ButtonStyle from '../ButtonStyle/ButtonStyle';
 import Image from 'next/image'
+import AdventureStarts from '../AdventureStarts/AdventureStarts'
 
 const FooterSection = ({ title }) => {
 
   return (
     <footer className={styles.FooterBlock}>
+    
+<AdventureStarts
+        Title={"The Adventure starts today!"}
+        SubTitle={"We are trusted around the World!"}
+        BtnTitle={"Book Now"}
+      />
+
       <Container className={styles.ContBody}>
         <Row>
           <Col xs={12} xl={4} className={styles.FooterLogoCol}>
@@ -88,7 +96,7 @@ const FooterSection = ({ title }) => {
                 outline={true}
                 fullwidth={true}
                 onClick={() => { console.log("Click Event") }}
-                className={styles.SubsCrbBtn}
+                SubsCrbBtn={true} 
               />
 
               <div className="text-center">

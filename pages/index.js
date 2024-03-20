@@ -1,14 +1,13 @@
 import React from 'react'
 import PageHead from '../component/PageHead'
-import RecentSearch from '../component/RecentSearch'
-import AdventureStarts from '../component/AdventureStarts/AdventureStarts'
+import RecentSearch from '../component/RecentSearch' 
 import ExploreSearch from '../component/ExploreSearch'
-import TopAirlineDeal from '../component/TopAirlineDeal'
-import FlightOfferDl from '../component/FlightOfferDl'  
+import TopAirlineDeal from '../component/TopAirlineDeal' 
 import LatestBlogs from '../component/LatestBlogs'
 import ExploreTravel from '../component/ExploreTravel'
 import { Hostname, siteid } from '../utils/static'
 import { getApiData } from './api/GetApiResp'
+import OurHighlights from '../component/OurHighlights' 
 
 
 const index = ({ allblog }) => {
@@ -34,11 +33,30 @@ const index = ({ allblog }) => {
         ]}
       />
 
-    
-      <ExploreSearch
-        Title="Explore Top Searches"
-        Routes={[
-          { 'destination': 'New York', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-1.webp', }, { 'destination': 'Germany', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-2.webp', }, { 'destination': 'Greece', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-3.webp', }, { 'destination': 'Scotland', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-4.webp', }, { 'destination': 'Greece', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-5.webp', }, { 'destination': 'Scotland', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-6.webp', }, { 'destination': 'New York', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-7.webp', }, { 'destination': 'Germany', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-8.webp', }
+
+      <OurHighlights
+        Title="Why Choose Us"
+        Content={[
+          {
+            'icon': 'best-price-ic.png',
+            'title': 'Best Price Guarantee',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+          },
+          {
+            'icon': 'easyquick-book.png',
+            'title': 'Easy & Quick Booking',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+          },
+          {
+            'icon': 'tour-selection-ic.png',
+            'title': 'Best Tour Selection',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+          },
+          {
+            'icon': 'rating-icwhy.png',
+            'title': 'Memorable experiences',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+          }
         ]}
       />
 
@@ -46,40 +64,51 @@ const index = ({ allblog }) => {
         Title="Top Airline Deals"
         ViewALLBtn={'/airlines'}
         Routes={[
-          { 'thumbnail': 'airline-blcimg-1.jpg', 'from': 'DEL', 'date': '02 Dec 2023', 'to': 'BOM', 'price': '$ 3574' }, { 'thumbnail': 'airline-blcimg-2.jpg', 'from': 'DEL', 'date': '07 Dec 2023', 'to': 'NWK', 'price': '$ 9825' }, { 'thumbnail': 'airline-blcimg-3.jpg', 'from': 'DEL', 'date': '02 Dec 2023', 'to': 'BOM', 'price': '$ 3574' }, { 'thumbnail': 'airline-blcimg-4.jpg', 'from': 'DEL', 'date': '02 Dec 2023', 'to': 'NWK', 'price': '$ 9825' }, { 'thumbnail': 'airline-blcimg-1.jpg', 'from': 'DEL', 'date': '02 Dec 2023', 'to': 'BOM', 'price': '$ 3574' }, { 'thumbnail': 'airline-blcimg-3.jpg', 'from': 'DEL', 'date': '02 Dec 2023', 'to': 'NWK', 'price': '$ 9825' }
+          { 'thumbnail': 'airline-aqr-1.png' },
+          { 'thumbnail': 'airline-aqr-2.png' },
+          { 'thumbnail': 'airline-aqr-3.png' },
+          { 'thumbnail': 'airline-aqr-4.png' },
+          { 'thumbnail': 'airline-aqr-5.png' },
+          { 'thumbnail': 'airline-aqr-6.png' },
+          { 'thumbnail': 'airline-aqr-7.png' },
+          { 'thumbnail': 'airline-aqr-8.png' },
         ]}
       />
 
-<AdventureStarts
-        Title={"The Adventure starts today!"}
-        SubTitle={"We are trusted around the World!"}
-        BtnTitle={"Book Now"}
-      />
 
 
-
-
-      <FlightOfferDl
-        Title="Flight Offer Deals"
+      <ExploreSearch
         Routes={[
-          { 'thumbnail': 'flgoff-1.webp', 'destination': 'Malaga to Bhutan', 'date': '20 Nov 2023 - 01 Dec 2023', 'class': 'Economy Class', 'offerapply': true, 'price': '$ 761', }, { 'thumbnail': 'flgoff-2.webp', 'destination': 'Malaga to Singapore', 'date': '20 Nov 2023 - 01 Dec 2023', 'class': 'Economy Class', 'offerapply': true, 'price': '$ 761', }, { 'thumbnail': 'flgoff-3.webp', 'destination': 'Singapore to Thailand', 'date': '20 Nov 2023 - 01 Dec 2023', 'class': 'Economy Class', 'offerapply': true, 'price': '$ 761', }
+          { 'from': 'New York', 'to': 'New York', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-1.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
+          { 'from': 'New York', 'to': 'Germany', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-2.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
+          { 'from': 'New York', 'to': 'Greece', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-3.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
+          { 'from': 'New York', 'to': 'Scotland', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-4.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
+          { 'from': 'New York', 'to': 'Greece', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-5.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
+          { 'from': 'New York', 'to': 'Greece', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-3.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
+          { 'from': 'New York', 'to': 'Scotland', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-6.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
+          { 'from': 'New York', 'to': 'Germany', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-2.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
+          { 'from': 'New York', 'to': 'Greece', 'date': '28 Nov 2023', 'thumbnail': 'explore-topsearch-5.webp', 'code': 'BOM - NYC', 'price': '$ 345' },
         ]}
       />
 
- 
+
 
       <div className='overflow-hidden'>
-    
+
 
         <LatestBlogs
-          Title="Blogs"
+          Title="Enjoy Fresh Travel Blogs"
           ViewALLBtn={'/blog'}
           BlogsItems={blogFouritem}
           error={`Sorry ! No blogs items found`}
         />
 
+
  
       </div>
+
+       
+    
 
 
     </>

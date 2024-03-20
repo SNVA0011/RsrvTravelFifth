@@ -19,6 +19,7 @@ const AdventureStarts = ({Title, SubTitle, BtnTitle}) => {
                         />
                         </div>
                     </Col>
+                    
                     <Col className='align-self-center'>
                        <div className={styles.BtnStartALign}>
                        <div className={styles.BtnStartAdv}>{Title}</div>
@@ -28,6 +29,7 @@ const AdventureStarts = ({Title, SubTitle, BtnTitle}) => {
                         </div>
                        </div>
                     </Col>
+
                     <Col sm={3} className='px-0 text-md-end mt-4 mt-md-0 d-none d-sm-block'>
                         <div className={styles.AdvTh}>
                         <Image src={"/images/adv-start-right.png"}

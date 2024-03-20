@@ -8,7 +8,7 @@ import Moment from 'react-moment';
 import { Icon } from '@iconify/react';
 
 const LatestBlogs = ({ Title, BlogsItems, ViewALLBtn, error }) => {
-
+ 
      return (
         <>
             <div className={styles.TopBlogWave}></div>
@@ -38,11 +38,16 @@ const LatestBlogs = ({ Title, BlogsItems, ViewALLBtn, error }) => {
                                             </div>
                                             <div className={styles.BlogDate}>
                                                 <span className={styles.BlogDateImg}>
-                                                    <Image src={`/images/date-iconblog.png`} width={20} height={20} alt='date-icon' />
+                                                <Icon icon="fontisto:date" width="96" height="96" />
                                                 </span>
-                                                <Moment date={item.posttime} format="MMM DD, YYYY" />
+                                                <Moment date={item.posttime} format="MMM DD, YYYY" /> <span className={`mx-2 ${styles.BlogDateImgTrv}`}>|</span> Travel
                                             </div>
                                             <div className={styles.BlogTitle}>{item.heading}</div>
+
+                                            <div className={styles.BlogReadMore}>
+                                            Read More 
+                                            <Icon icon="solar:arrow-right-broken" width="20" height="20" />
+                                            </div>
                                         </a>
                                     </Link>
                                 </Col>

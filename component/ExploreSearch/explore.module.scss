@@ -18,6 +18,11 @@
     @include mq('max', 767px) {
         margin-bottom: 6px;
     }
+
+    img{
+        margin: 0 10px;
+        width: 34px;
+    }
 }
 
 .ExploreSrcGrow,
@@ -28,6 +33,8 @@
 
 
 .ExploreSrcGrow { 
+    padding-top: 16px;
+    padding-bottom: 16px;
     @include mq('min', 768px) {
         padding-left: 15px;
         padding-right: 10px;
@@ -35,21 +42,22 @@
 }
 
 .ExploreSrcDate {
-    color: $lightgray;
+    color: #959595;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal; 
+    line-height: normal;
+    margin-bottom: 7px;
     @include mq('max', 767px) {
         font-size: 11px;
     }
 }
 
 .ExploreSrcRow {
-    margin: 0 -12px -40px;
+    margin: 0 -12px -15px;
 
     @include mq('max', 1199px) {
-        margin: 0 -12px -30px;
+        margin: 0 -12px -15px;
     }
 
     @include mq('max', 991px) {
@@ -66,10 +74,10 @@
 }
 
 .ExploreSrcCol {
-    padding: 0 12px 40px;
+    padding: 0 12px 15px;
 
     @include mq('max', 1199px) {
-        padding: 0 12px 30px;
+        padding: 0 12px 15px;
     }
 
     @include mq('max', 991px) {
@@ -106,7 +114,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
-
+    border: solid 1px rgb(233 233 233 / 50%);
+    background-color: rgb(251 251 251 / 60%);
+    padding-left: 12px;
     @include mq('max', 767px) {
         padding-bottom: 15px;
     }
@@ -144,11 +154,11 @@
 
 .ExploreSrcCard:hover {
     &::before {
-        background-color: $primaryoff;
+        background-color: #fff7ed;
 
         @include mq('min', 768px) {
             border-right: solid 2px $primary;
-            width: 100%;
+            width: 98%;
         }
 
         @include mq('max', 767px) {
@@ -162,10 +172,10 @@
     }
 
     .ExploreSrcThumb {
-        @include css3('transform', scale(1.15));
+        @include css3('transform', scale(1.10));
 
         img {
-            @include css3('transform', scale(1.15));
+            @include css3('transform', scale(1.10));
         }
 
         &:after {
@@ -181,10 +191,11 @@
 
 
 .ExploreSrcThumb {
-    position: relative;
-    overflow: hidden;
+    position: relative; 
     z-index: 0;
-
+    top: 10px;
+    
+    @include css3('transform-origin', right center);
     @include mq('max', 767px) {
         margin-bottom: 16px;
         @include css3('transform-origin', bottom center);
@@ -213,4 +224,39 @@
         width: 100%;
         overflow: visible !important;
     }
+}
+
+.ExploreSrcPrice{
+    color: $primary;
+    font-weight: 700;
+}
+
+.ExploreSrcCode, .ExploreSrcPrice{
+    display: inline-block;
+}
+
+.ExploreSrcCode{
+    color: #b38735;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.ExploreSepor{
+    color: $secondary;
+}
+
+.RoutBtnInt{
+    margin-left: 10px;
+}
+.RouteTitle{
+    text-align: left;
+}
+
+.RoutBtn{
+    height: 36px;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 600;
+
 }

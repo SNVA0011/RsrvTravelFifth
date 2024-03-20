@@ -1,33 +1,76 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 import styles from './explore.module.scss';
 import Image from 'next/image';
+import ButtonStyle from '../ButtonStyle/ButtonStyle';
 
 const ExploreSearch = ({ Title, Routes }) => {
+    const [route, setRoute] = useState("Domestic");
+
     return (
         <section className={styles.ExploreSrcBlock}>
             <Container className='position-relative'>
-                <SectionTitle title={Title} />
+
+                <Row>
+                    <Col xs={6}>
+                        <SectionTitle title={`Popular ${route} Route`} 
+                             className={`${styles.RouteTitle}`}
+                        /> 
+                    </Col>
+                    <Col xs={6} className='text-right'>
+                        <ButtonStyle
+                            content={<>
+                                Domestic
+                            </>}
+                            outline={route === 'Domestic' ? false : true}
+                            fullwidth={false}
+                            onClick={() => { setRoute("Domestic") }}
+                            className={`${styles.RoutBtn} ${styles.RoutBtnDom}`}
+                        />
+                        <ButtonStyle
+                            content={<>
+                                International
+                            </>}
+                            outline={route === 'International' ? false : true}
+                            fullwidth={false}
+                            onClick={() => { setRoute("International") }}
+                            className={`${styles.RoutBtn} ${styles.RoutBtnInt}`}
+                        />
+                    </Col>
+                </Row>
+
+
+
+
                 {Routes?.length > 0 && <Row className={styles.ExploreSrcRow}>
                     {Routes.map((item, index) => {
                         return (
-                            <Col xs={12} md={4} lg={3} key={index} className={styles.ExploreSrcCol}>
-                                <div className={`d-flex flex-column flex-md-row align-items-center ${styles.ExploreSrcCard}`}>
-                                <div className={styles.ExploreSrcThumb}>
-                                        <Image src={`/images/${item.thumbnail}`} width={80} height={80} className={styles.ExploreSrcImg} alt={item.destination}/>
+                            <Col xs={12} md={4} key={index} className={styles.ExploreSrcCol}>
+                                <div className={`d-flex flex-column flex-md-row ${styles.ExploreSrcCard}`}>
+                                    <div className={styles.ExploreSrcThumb}>
+                                        <Image src={`/images/${item.thumbnail}`} width={80} height={80} className={styles.ExploreSrcImg} alt={item.destination} />
                                     </div>
 
-                                    <div className={`flex-grow-1 ${styles.ExploreSrcGrow}`}>  
-                                    <div className={`${styles.ExploreSrcDes}`}>
-                                           {item.destination}
-                                        </div> 
+                                    <div className={`flex-grow-1 ${styles.ExploreSrcGrow}`}>
                                         <div className={`${styles.ExploreSrcDate}`}>
-                                             {item.date}
+                                            {item.date}
                                         </div>
-                                       
-                                    </div> 
-                                   
+                                        <div className={`${styles.ExploreSrcDes}`}>
+                                            {item.from}
+                                            <img src='/images/route-lineplane.png' />
+                                            {item.to}
+                                        </div>
+                                        <div className={`${styles.ExploreSrcCode}`}>
+                                            {item.code}
+                                        </div>
+                                        <span className={`mx-2 ${styles.ExploreSepor}`}>|</span>
+                                        <div className={`${styles.ExploreSrcPrice}`}>
+                                            {item.price}
+                                        </div>
+
+                                    </div>
+
                                 </div>
                             </Col>
                         )
@@ -35,12 +78,12 @@ const ExploreSearch = ({ Title, Routes }) => {
 
                 </Row>}
 
-                
-        <ul className={`d-lg-none PopularRtsUl`}>
-            <li className={'PopularRtsLi'}></li>
-            <li className={`PopularRtsLi PopularRtsLiAct`}></li>
-            <li className={'PopularRtsLi'}></li>
-          </ul>
+
+                <ul className={`d-lg-none PopularRtsUl`}>
+                    <li className={'PopularRtsLi'}></li>
+                    <li className={`PopularRtsLi PopularRtsLiAct`}></li>
+                    <li className={'PopularRtsLi'}></li>
+                </ul>
             </Container>
         </section>
     )

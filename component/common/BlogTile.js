@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Moment from 'react-moment';
 import NoitemError from '../../component/common/NoitemError';
+import { Icon } from '@iconify/react';
 
 
 
@@ -34,7 +35,7 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
 
                       <div className="content-body pt-1">
                         <p className="date-with-icon">
-                          <img src="/images/blogdate-icon.png" />
+                        <Icon icon="fontisto:date" width="18" height="18" />
                           <span className="">
                             <Moment date={item.posttime} format="MMM DD, YYYY" />
                           </span>

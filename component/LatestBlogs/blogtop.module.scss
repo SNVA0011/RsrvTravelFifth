@@ -15,11 +15,11 @@
 
 .TopBlogBlock {
     position: relative;
-    padding: 40px 0 60px; 
-    background-color: $primaryoff;
+    padding: 40px 0 160px; 
+    background-color: #fff5ea;
     &::before {
         content: '';
-        background-color: $primaryoff;
+        background-color: #fff5ea;
         width: 100%;
         height: 228px;
         position: absolute;
@@ -32,8 +32,9 @@
     position: relative;
     padding-top: 79%;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 20px; 
+    margin-top: -60px;
    &, img {
         @include css3(transition, all 600ms cubic-bezier(0.5, 0, 0, 1.25));
     }
@@ -58,7 +59,15 @@
 
 .TopBlogCard {
     @include css3(transition, all 0.4s cubic-bezier(0.5, 0, 0, 1.25));
-
+    padding: 12px 17px;
+    border-radius: 30px 30px 16px 16px;
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 10px 55px -5px rgba(0, 0, 0, 0.04), 0 6px 10px -6px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 10px 55px -5px rgba(0, 0, 0, 0.04), 0 6px 10px -6px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 10px 55px -5px rgba(0, 0, 0, 0.04), 0 6px 10px -6px rgba(0, 0, 0, 0.08);
+    -ms-box-shadow: 0 10px 55px -5px rgba(0, 0, 0, 0.04), 0 6px 10px -6px rgba(0, 0, 0, 0.08);
+    -o-box-shadow: 0 10px 55px -5px rgba(0, 0, 0, 0.04), 0 6px 10px -6px rgba(0, 0, 0, 0.08);
     &:hover {
         .TopBlogThumb {
             @include css3(box-shadow, 0 28px 50px -12px rgb(0 0 0 / 24%)); 
@@ -78,12 +87,11 @@
                      box-shadow: 0 0 0px 20px rgba($primary, 0.2), 0 0 0px 40px rgba($primary, .5)
             }
         }
+
+        .BlogReadMore svg,
         .BlogTitle {
             color: $primary; 
-        }
-         
-
-       
+        } 
 
     }
 }
@@ -95,11 +103,7 @@
 
 
 .TopBlogRow {
-    margin: 0 -15px;
-      @include mq('max', 1299px) {
-        margin: 0 -12px;
-    }
-
+    margin: 0 -12px; 
     @include mq('max', 1299px) {
         margin: 0 -10px;
     } 
@@ -109,11 +113,8 @@
 }
 
 .TopBlogCol {
-    padding: 0 15px;
-       @include mq('max', 1299px) {
-        padding: 0 12px;
-    }
-
+    padding: 0 12px;
+    margin-top: 60px; 
     @include mq('max', 1299px) {
         padding: 0 10px;
     }
@@ -122,9 +123,7 @@
     } 
 }
 
-.BlogDate, .BlogTitle{
-    font-size: 16px;
-    font-style: normal;
+.BlogDate, .BlogTitle{ 
    @include SixteenFontMedia;
 }
 
@@ -132,14 +131,18 @@
     color: $charcoal; 
     font-weight: 500;
     line-height: normal;
+    font-size: 13px;
+    font-style: normal;
 }
 
 .BlogTitle {
     color: $charcoal; 
-    font-weight: 500;
+    font-weight: 700;
     line-height: 26px;
     margin-top: 6px;
     letter-spacing: 0.4px;
+    font-size: 17px;
+    font-style: normal;
     @include mq('max', 991px) {
         line-height: 1.5;
        
@@ -147,18 +150,51 @@
 }
 
 .BlogDateImg {
-    margin-right: 12px;
+    margin-right: 8px;
     display: inline-block;
-    vertical-align: middle;
-    @include mq('max', 1199px) {
-        margin-right: 8px;
-    width: 16px;
-    height: 16px;
+    vertical-align: top;
     position: relative;
-    top: -2px;
-    }
-    @include mq('max', 991px) {
-        width: 14px;
-        height: 14px;
+    top: -3px;
+
+      svg{
+        width: 16px;
+        height: 16px;
+        color: $primary;
+        @include mq('max', 991px) {
+            width: 14px;
+            height: 14px;
+          }
       }
+}
+
+.BlogDateImgTrv{
+    color: $secondary;
+    position: relative;
+    top: -1px;
+}
+
+.BlogReadMore{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          font-weight: 700;
+          color: $lightgray;
+          border-top: solid 1px #f5f0ea;
+          margin-top: 30px;
+          padding-top: 11px;
+  svg{
+    color: $secondary;
+  }
 }

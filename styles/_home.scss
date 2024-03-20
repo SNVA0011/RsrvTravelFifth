@@ -153,11 +153,12 @@ img.airhostess-with-belt {
       font-size: 13px;
     }
 
-    img {
+    img, svg {
       margin-right: 9px;
       display: inline-block;
       position: relative;
       top: -2px;
+      color: $primary;
 
       @include mq('max', 1299px) {
         width: 14px;

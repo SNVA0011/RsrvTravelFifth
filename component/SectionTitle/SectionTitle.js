@@ -3,9 +3,9 @@ import styles from './titleui.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const SectionTitle = ({ title, ViewALLBtn }) => { 
+const SectionTitle = ({ title, ViewALLBtn, className = null }) => { 
   return (
-    <h4 className={`${styles.SectionTitle} ${ViewALLBtn ? styles.ViewALLBtnHeading : ''}`}>
+    <h4 className={`${styles.SectionTitle} ${ViewALLBtn ? styles.ViewALLBtnHeading : ''} ${className}`}>
       {title}
       {ViewALLBtn && <Link href={ViewALLBtn}>
         <a className={styles.ViewALLBtn}> View All

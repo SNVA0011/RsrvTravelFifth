@@ -14,6 +14,8 @@ const TopAirlineDeal = ({ Title, Routes, ViewALLBtn }) => {
                         title={Title}
                         ViewALLBtn={ViewALLBtn}
                     />
+                    <p className={styles.TopAirlineSub}>Book cheap flights on your favourite airlines</p>
+
                     {Routes?.length > 0 && <Row className={styles.TopAirlineRow}>
                         {Routes.map((item, index) => {
                             return (
@@ -21,30 +23,10 @@ const TopAirlineDeal = ({ Title, Routes, ViewALLBtn }) => {
                                     <div className={`${styles.TopAirlineCard}`}>
 
                                         <div className={styles.TopAirlineThumb}>
-                                            <Image src={`/images/${item.thumbnail}`}
-                                                fill={true}
-                                                layout={'fill'}
-                                                objectFit={'contain'}
-                                                objectPosition={'left'}
+                                            <img src={`/images/${item.thumbnail}`} 
                                                 className={styles.TopAirlineImg}
                                                 alt={`${item.from}-${item.to}`} />
-                                        </div>
-
-                                        <div className={`${styles.TopAirlineGrow}`}>
-                                            <div className={`${styles.TopAirlineDept} ${styles.TopAirDeptFirst}`}>
-                                                {item.from}
-                                            </div>
-                                            <div className={`${styles.TopAirlineDate}`}>
-                                                {item.date}
-                                            </div>
-                                            <div className={`${styles.TopAirlineDept}`}>
-                                                {item.to}
-                                            </div>
-                                        </div>
-
-                                        <div className={`${styles.TopAirlinePrice}`}>
-                                            {item.price}
-                                        </div>
+                                        </div> 
 
                                     </div>
                                 </Col>

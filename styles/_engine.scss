@@ -656,6 +656,10 @@ img.swap-desg {
     z-index: 13;
     border-radius: 80px;
     background-color: $white;
+
+    @include mq('max', 1199px) {
+        border-radius: 8px;
+    }
 }
 
 [aria-expanded="true"] .engineexp-text.input-group {
@@ -663,6 +667,10 @@ img.swap-desg {
     z-index: 11;
     border-radius: 80px;
     background-color: $white;
+
+    @include mq('max', 1199px) {
+        border-radius: 8px;
+    }
 }
 
 .travellers-class .dropdown,
@@ -681,6 +689,7 @@ img.swap-desg {
         @include mq('max', 1199px) {
             background: #f5f5f5;
             @include css3('backdrop-filter', blur(4px));
+            border-radius: 8px;
         }
     }
 
@@ -1366,10 +1375,10 @@ img.swap-desg {
     @include css3('animation-name', fadeInUpperx);
     @include css3('animation-fill-mode', both);
     @include css3('transform-origin', top left);
-    background-color: $primary;
+    background-color: #DC391B;
 
     &.MuiPaper-root::before {
-        border-bottom-color: $primary;
+        border-bottom-color: #DC391B;
     }
 
     @include mq('min', 1200px) {
@@ -1647,20 +1656,25 @@ img.swap-desg {
 
 .MobRadioCenter {
     color: $white;
-    text-align: center; 
-    &.home{
+    text-align: center;
+
+    &.home {
         .radio-custom-site:first-child::after {
             content: "";
             border-right: solid 2px #EABE6C;
             position: absolute;
-            right: -23px;
+            right: -22px;
             height: 30px;
             bottom: -6px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
             border-radius: 30px;
+            @include css3('transform', rotate(12deg));
+
         }
     }
-    }
-  
+}
+
 
 .engineexp-btn.searchmodf {
     @include columnGrid(74px);
