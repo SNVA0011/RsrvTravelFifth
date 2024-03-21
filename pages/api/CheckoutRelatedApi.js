@@ -1,5 +1,5 @@
 import axios from "axios";
-import { api_traveloes } from "../../utils/static";
+import { api_traveloes, basedeeplink } from "../../utils/static";
 
 
 export const checkoutFlightData = async (
@@ -15,7 +15,7 @@ export const checkoutFlightData = async (
     });
 
     const body = {
-      key: `https://www.reservationsdeal.in/flight/checkout/${deep}`,
+      key: `${basedeeplink}/flight/checkout/${deep}`,
     };
     const data = await axios.post(
       `${api_traveloes}/v1/api/landingFromDeeplink`,
@@ -40,7 +40,7 @@ export const checkoutFlightData = async (
 export const fare_Check = async (deeplink, MetaLinkId) => {
   try {
     const body = {
-      key: `https://www.reservationsdeal.in/flight/checkout/${deeplink}`,
+      key: `${basedeeplink}/flight/checkout/${deeplink}`,
       MetaLinkId: MetaLinkId,
     };
 

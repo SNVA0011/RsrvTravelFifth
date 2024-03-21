@@ -2,27 +2,32 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import styles from './footer.module.scss'
 import Link from 'next/link'
-import { FooterLinks, WhiteBrandLogo } from '../../utils/static'
+import { FooterLinks, WhiteBrandLogo, headerUrl } from '../../utils/static'
 import ButtonStyle from '../ButtonStyle/ButtonStyle';
 import Image from 'next/image'
 import AdventureStarts from '../AdventureStarts/AdventureStarts'
+import { Icon } from '@iconify/react';
+import { useRouter } from 'next/router'
+
 
 const FooterSection = ({ title }) => {
+  const router = useRouter()
 
   return (
-    <footer className={styles.FooterBlock}>
-    
-<AdventureStarts
+    <footer className={`${styles.FooterBlock} ${router.asPath !== '/' && styles.FooterOther}`}>
+
+      {router.asPath === '/' && <AdventureStarts
         Title={"The Adventure starts today!"}
         SubTitle={"We are trusted around the World!"}
         BtnTitle={"Book Now"}
-      />
+      />}
+
 
       <Container className={styles.ContBody}>
         <Row>
-          <Col xs={12} xl={4} className={styles.FooterLogoCol}>
+          <Col xs={12} xl={3} className={styles.FooterLogoCol}>
 
-            <div className={styles.FooterLogoLeft}> 
+            <div className={styles.FooterLogoLeft}>
               <Link href={WhiteBrandLogo.url}>
                 <a className={'mainLogoArea'}>
                   <Image
@@ -36,19 +41,12 @@ const FooterSection = ({ title }) => {
 
               <p className={styles.FooterLogoCont}>Lorem ipsum dolor sit amet consectetur. Imperdiet morbi arcu condimentum aliquam. Lorem ipsum dolor sit amet consectetur.</p>
 
-              <Link href={'https://play.google.com/store/search?q='}>
-                <a target='_blank' className={styles.AppPlayFooter}><Image src={`/images/GooglePlay-ft.webp`} width={126} height={37} alt={'Google Play Store'} /></a>
-              </Link>
-
-              <Link href={'https://apps.apple.com/in/app/'}>
-                <a target='_blank' className={styles.AppAppleFooter}><Image src={`/images/Appstore-ft.webp`} width={126} height={37} alt={'Apple App Store'} /></a>
-              </Link>
 
               <ul className={styles.FooterSocial}>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/facebook-footer.webp'} alt="copyright" width={24} height={24} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/instagram-footer.webp'} alt="copyright" width={24} height={24} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/twitter-footer.webp'} alt="copyright" width={24} height={24} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/linkedin-footer.webp'} alt="copyright" width={24} height={24} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/facebook-footer.webp'} alt="copyright" width={18} height={18} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/instagram-footer.webp'} alt="copyright" width={18} height={18} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/twitter-footer.webp'} alt="copyright" width={18} height={18} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/linkedin-footer.webp'} alt="copyright" width={18} height={18} /></a></Link></li>
               </ul>
             </div>
 
@@ -80,10 +78,37 @@ const FooterSection = ({ title }) => {
             })}
           </>}
 
-          <Col xs={12} md={4} xl>
-          <hr className={`d-md-none ${styles.ContactLinksHr}`}></hr>
+          <Col xs={12} md={4} xl={3}>
+            <hr className={`d-md-none ${styles.ContactLinksHr}`}></hr>
             <div className={`${styles.QuickLinks}`}>
-              <h5>Contact with us</h5>
+              <h5>Contact</h5>
+
+              <ul className={`${styles.GetConnectUl}`}>
+              {headerUrl.social.map((item, index) =>(
+                <li key={index}>
+                  <a href={item.url} className='d-flex align-items-center'>
+                    <div className={styles.QuickCIcon}>
+                      <Icon icon={item.icon} color='#eabe6c' />
+                    </div>
+                    <div className={`flex-grow-1 ${styles.ConnectPhone}`}>
+                      <span>{item.heading}</span>
+                      <strong>{item.title}</strong>
+                    </div>
+                  </a>
+                </li>
+              ))}
+                
+                
+              </ul>
+
+            </div>
+          </Col>
+
+          <Col xs={12}  md={4} xl={3}>
+            <hr className={`d-md-none ${styles.ContactLinksHr}`}></hr>
+            <div className={`${styles.QuickLinks}`}>
+              <h5 className={`${styles.NewsltrTitle}`}>Newsletter</h5>
+              <p className={`${styles.NewsltrSub}`}>Subscribe our newsletter to get our latest update & news.</p>
 
               <div className={`${styles.animateLabel}`}>
                 <span className={styles.EmailIcon}><Image src={'/images/subs-mail.png'} alt="mail-icon" width={16} height={16} /> </span>
@@ -92,11 +117,11 @@ const FooterSection = ({ title }) => {
               </div>
 
               <ButtonStyle
-                content={'Submit'}
+                content={<><span className='me-1'>Submit</span> <Icon icon="fa:send" width="16" height="16" /></>}
                 outline={true}
                 fullwidth={true}
                 onClick={() => { console.log("Click Event") }}
-                SubsCrbBtn={true} 
+                SubsCrbBtn={true}
               />
 
               <div className="text-center">
@@ -109,24 +134,28 @@ const FooterSection = ({ title }) => {
 
             </div>
           </Col>
+
+         
         </Row>
       </Container>
 
 
-      <Container className={styles.ContFooter}>
-        <hr></hr>
-        <Row className={styles.CRowFooter}>
-          <Col xs={12} sm={6}>
-            <span className={styles.ContFtCopyrt}>
-              <Image src={'/images/icoutline-copyright.webp'} alt="copyright" width={20} height={20} />
-            </span>
-            {new Date().getFullYear()}. All Rights Reserved.
-          </Col>
-          <Col xs={12} sm={6} className='text-sm-end'>
-            (DBA of SNVA Traveltech Pvt. Ltd.)
-          </Col>
-        </Row>
-      </Container>
+      <div className={styles.ContFooter}>
+        <Container>
+          <Row className={`${styles.CRowFooter} align-items-center`}>
+            <Col xs={12} sm={6}>
+              <span className={styles.ContFtCopyrt}>
+                <Image src={'/images/icoutline-copyright.webp'} alt="copyright" width={18} height={18} />
+              </span>
+              {new Date().getFullYear()}. All Rights Reserved.
+            </Col>
+            <Col xs={12} sm={6} className='text-sm-end'>
+              (DBA of SNVA Traveltech Pvt. Ltd.)
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
     </footer>
   )
 }

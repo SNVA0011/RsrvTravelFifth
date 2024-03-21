@@ -16,8 +16,7 @@ const CustomerFeedback = () => {
           <h3>Our Customer Feedback</h3>
         </div>
 
-        <Swiper
-          centeredSlides={true}
+        <Swiper 
           slidesPerView={1}
           spaceBetween={10}
           pagination={{

@@ -10,10 +10,10 @@
 }
 
 .AdventureCont {
-  @include bgPath('adv-start-bg.webp');
-  background-color: #fff8fc;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include bgPath('cta-bg-fotter.png');
+  background-color: #060209;
+  background-size: auto 100%;
+  background-repeat: repeat;
   background-position: top center;
   border-radius: 20px;
   padding: 0; 
@@ -26,9 +26,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none; 
-  -webkit-box-shadow: 0 25px 40px -10px rgb(0 0 0 / 80%);
-  -moz-box-shadow: 0 25px 40px -10px rgb(0 0 0 / 80%);
-  box-shadow: 0 25px 40px -10px rgb(0 0 0 / 80%);
+  -webkit-box-shadow:0 10px 25px -5px rgb(0 0 0 / 60%);
+  -moz-box-shadow:0 10px 25px -5px rgb(0 0 0 / 60%);
+  box-shadow:0 10px 25px -5px rgb(0 0 0 / 60%);
 
   @include mq("min", 1200px) {
   max-width: 995px;
@@ -46,7 +46,7 @@
       position: absolute;
       top: -60%;
       left: -50%;
-      background-color: rgb(255 233 229 / 20%);
+      background-color: rgb(255 233 229 / 12%);
       -webkit-transform: rotate(30deg);
       transform: rotate(30deg);
       -webkit-animation-name: flashattradv;
@@ -57,7 +57,7 @@
       animation-fill-mode: both;
       -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite; 
-      @include css3('filter',  blur(8px)); 
+      @include css3('filter',  blur(25px)); 
     }
   }
 }
@@ -129,7 +129,7 @@
 }
 
 .BtnStartTrs {
-  color: $charcoal;
+  color: $white;
   text-align: center;
   font-family: "Overlock", sans-serif;
   font-size: 26px;

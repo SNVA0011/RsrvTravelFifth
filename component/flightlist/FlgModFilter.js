@@ -427,7 +427,7 @@ const FlgModFilter = ({ flightResponse, dispatchFilter, search }) => {
                             <Chip
                               label={`${search.currencyCode} : ${value[0]} - ${value[1]}`}
                               onDelete={() => filteredDelete("Price", defaultValue)}
-                              color='primary' style={{backgroundColor:'#eabe6c',fontSize : '12px'}}  
+                              color='primary' style={{backgroundColor:'#891652',fontSize : '12px'}}  
                             />
                           </span>
                         )}
@@ -442,7 +442,7 @@ const FlgModFilter = ({ flightResponse, dispatchFilter, search }) => {
                                 traveltime[0]
                               )} - ${totalTravelTime(traveltime[1])}`}
                               onDelete={() => filteredDelete("time", duration)}
-                              color='primary' style={{backgroundColor:'#eabe6c',fontSize : '12px'}}  
+                              color='primary' style={{backgroundColor:'#891652',fontSize : '12px'}}  
                             />
                           </span>
 

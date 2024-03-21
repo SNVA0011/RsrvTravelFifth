@@ -13,6 +13,7 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    @include css3('transition', all 0.35s); 
 
     @include mq('max', 991px) {
         font-size: 15px;
@@ -65,6 +66,7 @@
         color: $secondary;
         border-color: $secondary;
         font-weight: 600;
+        background-color: #181818;
         &:hover,
         &:active {
             background-color: $secondary;

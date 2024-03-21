@@ -58,11 +58,10 @@ const contact = () => {
                     <div className="media-body flex-grow-1">
                       <h4 className="contact-info-title">Our Location</h4>
                       <div className="contact-info-text">
-                        SNVA LLC, 2 Industrial Park DR, Waldorf MD 20602, United
-                        States
+                      Lorem ipsum dolor sit amet consectetur
                       </div>
                       <a
-                        href="http://maps.google.com/?q=SNVA LLC, 2 Industrial Park DR, Waldorf MD 20602, United States"
+                        href="http://maps.google.com/?q=Lorem ipsum dolor sit amet consectetur"
                         target="_blank"
                         className="find-us"
                         rel="noreferrer" 
@@ -79,9 +78,9 @@ const contact = () => {
                     <div className="media-body flex-grow-1">
                       <div className="contact-info-text phoneinf-urls">
                         <h4 className="contact-info-title">Phone</h4>
-                        <a href="tel:+1 (800)630-3454">+1 (800)630-3454</a>
-                        <a href="tel:+1 (860)900-0101">+1 (860)900-0101</a>
-                        <a href="tel:+1 (240)270-0014">+1 (240)270-0014</a>
+                        <a href="tel:+00-0000000000">+00-0000000000</a> 
+                        <a href="tel:+00-0000000000">+00-0000000000</a> 
+                        <a href="tel:+00-0000000000">+00-0000000000</a> 
                       </div>
                     </div>
                   </div>
@@ -94,9 +93,9 @@ const contact = () => {
                       <div className="contact-info-text">
                         <a
                           className="email-us"
-                          href="mailto:support@brandname.in"
+                          href="mailto:test@support.com"
                         >
-                          support@brandname.in
+                          test@support.com
                         </a>
                       </div>
                     </div>

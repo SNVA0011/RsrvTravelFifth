@@ -10,6 +10,7 @@ export const paginateSize = 15;
 export const cms_trav_api = "https://cms.travomint.com";
 export const cms_trav_authcode = "Trav3103s987876";
 export const api_traveloes = "https://routes.traveloes.com";
+export const basedeeplink=`https://www.reservationsdeal.in`
 
 
 export const BrandLogo = {
@@ -21,7 +22,7 @@ export const BrandLogo = {
 export const WhiteBrandLogo = {
   url: "/",
   imgAlt: "travomint-logo",
-  imgPath: "/images/white-logo-footer.webp",
+  imgPath: "/images/travomint-logo.webp",
 }
 export const contactlist = [
   {
@@ -46,7 +47,7 @@ export const contactlist = [
 
 export const FooterLinks = [
   {
-    'heading': 'About',
+    'heading': 'Company',
     'Urls': [
       {
         'title': 'About Us',
@@ -59,12 +60,7 @@ export const FooterLinks = [
       {
         'title': 'FAQs',
         'url': '/faq'
-      }
-    ]
-  },
-  {
-    'heading': 'Other Links',
-    'Urls': [
+      },
       {
         'title': 'Privacy Policies',
         'url': '/privacy'
@@ -78,20 +74,22 @@ export const FooterLinks = [
         'url': '/contact-us'
       } 
     ]
-  },
+  }, 
 ]
 
 
 export const headerUrl = {
   social: [
     {
+      heading: "Email Address",
       title: "test@support.com",
       url: "mailto:test@support.com",
       icon: "fluent:mail-24-filled",
     },
     {
-      title: "+91-0000000000",
-      url: "tel:+91-0000000000",
+      heading: "Phone Number",
+      title: "+00-0000000000",
+      url: "tel:+00-0000000000",
       icon: "ph:phone-call-fill",
     },
   ],
@@ -99,13 +97,13 @@ export const headerUrl = {
     {
       title: "Flight",
       url: "/",
-      icon: "fa-solid:plane-departure",
+      icon: "mdi:flight",
       disable: false,
     },
     {
       title: "Blog",
       url: "/blog",
-      icon: "material-symbols-light:post-add",
+      icon: "fa-regular:newspaper",
       disable: false,
     },
     // {

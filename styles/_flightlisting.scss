@@ -572,7 +572,7 @@ background: #15061f;
 
 .timeoffer-ends {
    border-radius: 10px;
-   background: $primaryoff;
+   background: #fffaf1;
    padding: 12px;
    text-align: center;
    display: block;
@@ -617,7 +617,7 @@ background: #15061f;
    }
 
    h4 {
-      color: $secondary;
+      color: #240A34;
       font-size: 18px;
       font-style: normal;
       font-weight: 600;
@@ -673,7 +673,7 @@ background: #15061f;
    .badge-lg {
       font-style: normal;
       line-height: normal;
-      background-color: $secondary;
+      background-color: $primary;
       color: $white;
       display: inline-block;
    }
@@ -690,7 +690,7 @@ background: #15061f;
 
 // flatdisc-comfortable
 .flatdisc-comfortable {
-   background: $secondary;
+   background: #240A34;
    text-align: center;
    display: block;
    color: $white;
@@ -751,7 +751,7 @@ background: #15061f;
             top: 0;
             margin-left: -11px;
             left: 100%;
-            background: $secondary;
+            background: #240a34;
             border-left: solid 10px $secondary;
             @include css3('transform', skewX(23deg));
             @include css3('transform-origin', bottom);
@@ -1391,7 +1391,7 @@ hr.hr-airline {
          @include css3('transition', all 0.2s);
 
          &.active {
-            background-color: $secondary;
+            background-color: $primary;
             color: $white;
             -webkit-backface-visibility: visible !important;
             backface-visibility: visible !important;

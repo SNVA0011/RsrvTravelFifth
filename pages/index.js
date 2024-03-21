@@ -8,6 +8,7 @@ import ExploreTravel from '../component/ExploreTravel'
 import { Hostname, siteid } from '../utils/static'
 import { getApiData } from './api/GetApiResp'
 import OurHighlights from '../component/OurHighlights' 
+import Head from 'next/head'
 
 
 const index = ({ allblog }) => {
@@ -16,11 +17,15 @@ const index = ({ allblog }) => {
 
   return (
     <>
+
       <PageHead
         title={`BrandName : Hotels, Vacations & Travel Deals`}
         description={`Book Tickets, luxury hotels tickets with best deals from your destinations & Get Best Price Guarantee @ ${Hostname}`}
         keywords={`${Hostname}, Hotels, Travel Deals`}
       />
+          <Head> 
+   <link rel="preload" fetchpriority="high" as="image" href="/images/engine-banner-airplane.webp" type="image/webp" />
+</Head>
 
       <ExploreTravel />
 

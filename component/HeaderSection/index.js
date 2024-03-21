@@ -109,6 +109,7 @@ const HeaderSection = ({FlightHeader}) => {
                                                 <Link href={item.url}>
                                                     <a className={`${location.pathname === item.url ? `${styles.NavbarLinkAct} ` : ''}`} onClick={MenuClose}>
                                                         <span>
+                                                        <Icon icon={item.icon} />
                                                             {item.title}
                                                         </span>
                                                     </a>
