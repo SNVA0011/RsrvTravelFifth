@@ -14,8 +14,10 @@ const TopAirlineDeal = ({ Title, Routes, ViewALLBtn }) => {
                         title={Title}
                         ViewALLBtn={ViewALLBtn}
                     />
-                    <p className={styles.TopAirlineSub}>Book cheap flights on your favourite airlines</p>
+                </Container>
 
+
+                <Container className={styles.TopAirlineContBody}>
                     {Routes?.length > 0 && <Row className={styles.TopAirlineRow}>
                         {Routes.map((item, index) => {
                             return (
@@ -23,10 +25,10 @@ const TopAirlineDeal = ({ Title, Routes, ViewALLBtn }) => {
                                     <div className={`${styles.TopAirlineCard}`}>
 
                                         <div className={styles.TopAirlineThumb}>
-                                            <img src={`/images/${item.thumbnail}`} 
+                                            <img src={`/images/${item.thumbnail}`}
                                                 className={styles.TopAirlineImg}
                                                 alt={`${item.from}-${item.to}`} />
-                                        </div> 
+                                        </div>
 
                                     </div>
                                 </Col>
@@ -35,13 +37,17 @@ const TopAirlineDeal = ({ Title, Routes, ViewALLBtn }) => {
 
                     </Row>}
 
-                    <ul className={`d-xl-none PopularRtsUl`}>
-                        <li className={'PopularRtsLi'}></li>
-                        <li className={`PopularRtsLi PopularRtsLiAct`}></li>
-                        <li className={'PopularRtsLi'}></li>
-                    </ul>
 
+                    <div className='d-xl-none popularRtsUl-spt'>
+                        <ul className={`PopularRtsUl`}>
+                            <li className={'PopularRtsLi'}></li>
+                            <li className={`PopularRtsLi PopularRtsLiAct`}></li>
+                            <li className={'PopularRtsLi'}></li>
+                        </ul>
+                    </div>
                 </Container>
+
+
             </section>
         </>
     )

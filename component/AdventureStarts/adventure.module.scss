@@ -7,16 +7,20 @@
   position: relative;
   top: -80px;
   margin-bottom: -66px;
+  
+  @include mq('max', 575px) {
+    padding-left: 18px;
+    padding-right: 18px;
+  } 
 }
 
 .AdventureCont {
   @include bgPath('cta-bg-fotter.png');
-  background-color: #060209;
+  background-color: #202020;
   background-size: auto 100%;
   background-repeat: repeat;
   background-position: top center;
-  border-radius: 20px;
-  padding: 0; 
+  padding: 0;
   overflow: hidden;
   cursor: pointer;
   overflow: hidden;
@@ -25,41 +29,19 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  -o-user-select: none; 
-  -webkit-box-shadow:0 10px 25px -5px rgb(0 0 0 / 60%);
-  -moz-box-shadow:0 10px 25px -5px rgb(0 0 0 / 60%);
-  box-shadow:0 10px 25px -5px rgb(0 0 0 / 60%);
-
+  -o-user-select: none;
+  -webkit-box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%);
+  -moz-box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%);
+  border-radius: 6px;
   @include mq("min", 1200px) {
-  max-width: 995px;
-  } 
-  @include mq('max', 575px) {
-    padding: 10px 0 0;
-   }
-
-  &:after { 
-    @include mq('min', 768px) {
-      content: "";
-      display: inline-block;
-      width: 20%;
-      height: 300%;
-      position: absolute;
-      top: -60%;
-      left: -50%;
-      background-color: rgb(255 233 229 / 12%);
-      -webkit-transform: rotate(30deg);
-      transform: rotate(30deg);
-      -webkit-animation-name: flashattradv;
-      animation-name: flashattradv;
-      -webkit-animation-duration: 1.8s;
-      animation-duration: 1.8s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
-      -webkit-animation-iteration-count: infinite;
-      animation-iteration-count: infinite; 
-      @include css3('filter',  blur(25px)); 
-    }
+    max-width: 995px;
   }
+
+  @include mq('max', 575px) {
+    padding: 10px 0 0; 
+    border-radius: 10px;
+  } 
 }
 
 // flashattradv
@@ -92,9 +74,11 @@
   display: inline-block;
   position: relative;
   top: 5px;
+
   @include mq('max', 767px) {
- width: 150px;
-}
+    width: 150px;
+  }
+
   span {
     display: block;
     float: left;
@@ -102,13 +86,14 @@
   }
 }
 
-.BtnStartALign{
+.BtnStartALign {
   @include mq('max', 767px) {
-   padding: 20px;
-  } 
+    padding: 20px 5px;
+  }
+
   @include mq('max', 575px) {
-    padding: 0 20px 20px;
-   }
+    padding: 0 5px 20px;
+  }
 }
 
 .BtnStartAdv {
@@ -122,10 +107,15 @@
   background-color: $primary;
   border-radius: 6px;
   padding: 5px 30px;
-  @include SixteenFontMedia; 
+  @include SixteenFontMedia;
+
   @include mq('max', 767px) {
     padding: 5px 20px;
-   }
+    font-size: 14px;
+  }
+  @include mq('max', 575px) {
+    font-size: 12px;
+  }
 }
 
 .BtnStartTrs {
@@ -137,6 +127,7 @@
   font-weight: 900;
   line-height: normal;
   margin: 15px 0 10px;
+
   @include mq('max', 1199px) {
     font-size: 24px;
   }
@@ -144,11 +135,14 @@
   @include mq('max', 991px) {
     font-size: 22px;
   }
+
   @include mq('max', 767px) {
-    font-size: 20px; 
+    font-size: 20px;
+    margin: 20px 0;
   }
+
   @include mq('max', 425px) {
-    font-size: 18px; 
+    font-size: 18px;
   }
 }
 
@@ -162,6 +156,11 @@
   background-color: $primary;
   border-radius: 10px;
   padding: 5px 30px;
-  @include SixteenFontMedia;
+  @include SixteenFontMedia; 
+  @include mq('max', 767px) { 
+    font-size: 14px;
+  }
+  @include mq('max', 575px) {
+    font-size: 12px;
+  }
 }
-

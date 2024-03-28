@@ -8,8 +8,8 @@ import Moment from 'react-moment';
 import { Icon } from '@iconify/react';
 
 const LatestBlogs = ({ Title, BlogsItems, ViewALLBtn, error }) => {
- 
-     return (
+
+    return (
         <>
             <div className={styles.TopBlogWave}></div>
             <section className={styles.TopBlogBlock}>
@@ -18,7 +18,9 @@ const LatestBlogs = ({ Title, BlogsItems, ViewALLBtn, error }) => {
                         title={Title}
                         ViewALLBtn={ViewALLBtn}
                     />
+                </Container>
 
+                <Container className={styles.TopBlogContBody}>
 
                     {BlogsItems?.length > 0 ? <Row className={styles.TopBlogRow}>
                         {BlogsItems.map((item, index) => {
@@ -38,15 +40,15 @@ const LatestBlogs = ({ Title, BlogsItems, ViewALLBtn, error }) => {
                                             </div>
                                             <div className={styles.BlogDate}>
                                                 <span className={styles.BlogDateImg}>
-                                                <Icon icon="fontisto:date" width="96" height="96" />
+                                                    <Icon icon="fontisto:date" width="96" height="96" />
                                                 </span>
                                                 <Moment date={item.posttime} format="MMM DD, YYYY" /> <span className={`mx-2 ${styles.BlogDateImgTrv}`}>|</span> Travel
                                             </div>
                                             <div className={styles.BlogTitle}>{item.heading}</div>
 
                                             <div className={styles.BlogReadMore}>
-                                            Read More 
-                                            <Icon icon="solar:arrow-right-broken" width="20" height="20" />
+                                                Read More
+                                                <Icon icon="solar:arrow-right-broken" width="20" height="20" />
                                             </div>
                                         </a>
                                     </Link>
@@ -57,10 +59,18 @@ const LatestBlogs = ({ Title, BlogsItems, ViewALLBtn, error }) => {
                     </Row>
                         :
                         <div className='pt-3'>
-                        <div className="text-danger fw-semibold error-font-15 pn-5 text-center"><Icon icon="material-symbols:error-outline" /> {error}</div>
+                            <div className="text-danger fw-semibold error-font-15 pn-5 text-center"><Icon icon="material-symbols:error-outline" /> {error}</div>
                         </div>
                     }
 
+
+                    <div className='d-lg-none popularRtsUl-spt'>
+                        <ul className={`PopularRtsUl`}>
+                            <li className={'PopularRtsLi'}></li>
+                            <li className={`PopularRtsLi PopularRtsLiAct`}></li>
+                            <li className={'PopularRtsLi'}></li>
+                        </ul>
+                    </div>
                 </Container>
             </section>
         </>

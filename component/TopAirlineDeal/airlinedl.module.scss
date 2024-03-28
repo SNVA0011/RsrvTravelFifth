@@ -26,7 +26,7 @@
 
 .TopAirlineBlock {
     position: relative;
-    padding: 40px 0 0px;
+    padding: 47px 0 0px;
 
     &::before {
         content: '';
@@ -174,17 +174,37 @@
     position: relative;
     z-index: 1;
 }
+.TopAirlineContBody {
+    position: relative;
+    z-index: 1;
+    @include min-max(992px, 1199px) {
+        max-width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+     } 
+     @include mq('max', 991px) {
+         max-width: 100%;
+         padding-left: 0;
+         padding-right: 0;
+         overflow: hidden;
+      }   
+}
 
 
 .TopAirlineRow {
     margin: 0 -6px;
     @include mq('max', 1199px) {
-        @include scrollHorizontal;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        margin-top: -60px;
-        margin-bottom: -30px;
+        @include scrollHorizontal; 
         position: relative;
+        margin: 0 -4px -13px; 
+    }
+    @include mq('max', 991px) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    @include mq('max', 575px) {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 
@@ -192,7 +212,14 @@
     padding: 0 6px;
     @include columnGrid(12.5%);
     @include mq('max', 1199px) {
-        @include columnGrid(190px);
+        @include columnGrid(158px);
+        padding: 0 4px;
+    }
+    @include mq('max', 991px) {
+        @include columnGrid(142px);
+    }
+    @include mq('max', 767px) {
+        @include columnGrid(140px);
     }
 }
 
@@ -202,6 +229,9 @@
     z-index: 0; 
     width: 100%;
     padding: 0 10px;
+    @include mq('max', 991px) {
+        padding: 0 15px;
+    }
     img{
         max-height: 52px;
         height: auto;
@@ -230,31 +260,4 @@
         }
     }
 }
-
  
-
-
-.TopAirlineSub {
-    margin-top: -40px;
-    margin-bottom: 40px;
-    padding-top: 8px;
-    color: $primary;
-    font-weight: 500;
-    max-width: 300px;
-    font-size: 14px;
-
-    @include mq('max', 1399px) {
-        margin-top: -35px;
-        margin-bottom: 35px;
-    }
-
-    @include mq('max', 1299px) {
-        margin-top: -30px;
-        margin-bottom: 30px;
-    }
-
-    @include mq('max', 1199px) {
-        margin-top: -28px;
-        margin-bottom: 28px;
-    }
-}

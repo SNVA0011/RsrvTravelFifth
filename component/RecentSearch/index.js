@@ -48,11 +48,13 @@ const RecentSearch = ({ Title, Routes }) => {
 
                 </Row>}
 
-                <ul className={`PopularRtsUl ${styles.PopularRtsUlOp}`}>
-                    <li className={'PopularRtsLi'}></li>
-                    <li className={`PopularRtsLi PopularRtsLiAct`}></li>
-                    <li className={'PopularRtsLi'}></li>
-                </ul>
+                <div className={`d-lg-none popularRtsUl-spt ${styles.PopularRtsUlOp}`}>
+                    <ul className={`PopularRtsUl`}>
+                        <li className={'PopularRtsLi'}></li>
+                        <li className={`PopularRtsLi PopularRtsLiAct`}></li>
+                        <li className={'PopularRtsLi'}></li>
+                    </ul>
+                </div>
 
             </Container>
         </section>

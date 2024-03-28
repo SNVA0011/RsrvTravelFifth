@@ -8,6 +8,9 @@
     width: 100%;
     height: 85px;
     background-size: 100%;
+    @include mq('max', 991px) {
+        height: 68px;
+    }
     @include mq('max', 767px) {
         height: 68px;
     }
@@ -15,8 +18,18 @@
 
 .TopBlogBlock {
     position: relative;
-    padding: 40px 0 160px; 
+    padding: 40px 0 156px; 
     background-color: #fff5ea;
+    @include mq('max', 1199px) {
+     padding-bottom: 146px;
+    }
+    @include mq('max', 991px) {
+        padding-top: 60px;
+        padding-bottom: 136px; 
+       }
+    @include mq('max', 767px) {
+        padding-bottom: 126px; 
+       }
     &::before {
         content: '';
         background-color: #fff5ea;
@@ -68,6 +81,10 @@
     -moz-box-shadow: 0 10px 55px -5px rgba(0, 0, 0, 0.04), 0 6px 10px -6px rgba(0, 0, 0, 0.08);
     -ms-box-shadow: 0 10px 55px -5px rgba(0, 0, 0, 0.04), 0 6px 10px -6px rgba(0, 0, 0, 0.08);
     -o-box-shadow: 0 10px 55px -5px rgba(0, 0, 0, 0.04), 0 6px 10px -6px rgba(0, 0, 0, 0.08);
+    @include mq('max', 1199px) {
+       margin-bottom: 30px;
+       padding: 12px 15px;
+    } 
     &:hover {
         .TopBlogThumb {
             @include css3(box-shadow, 0 28px 50px -12px rgb(0 0 0 / 24%)); 
@@ -90,9 +107,122 @@
 
         .BlogReadMore svg,
         .BlogTitle {
-            color: $primary; 
-        } 
+            color: $primary;  
+        }  
 
+        .BlogReadMore svg{
+            -webkit-animation: slideFooter 400ms ease;
+            -moz-animation: slideFooter 400ms ease;
+            -o-animation: slideFooter 400ms ease;
+            animation: slideFooter 400ms ease; 
+        }
+
+    }
+}
+
+
+
+@-webkit-keyframes slideFooter {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(15px);
+        transform: translateX(15px);
+        opacity: 0;
+    }
+
+    51% {
+        -webkit-transform: translateX(-15px);
+        transform: translateX(-15px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideFooter {
+    0% {
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -moz-transform: translateX(15px);
+        transform: translateX(15px);
+        opacity: 0;
+    }
+
+    51% {
+        -moz-transform: translateX(-15px);
+        transform: translateX(-15px);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-o-keyframes slideFooter {
+    0% {
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -o-transform: translateX(15px);
+        transform: translateX(15px);
+        opacity: 0;
+    }
+
+    51% {
+        -o-transform: translateX(-15px);
+        transform: translateX(-15px);
+        opacity: 0;
+    }
+
+    100% {
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFooter {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(15px);
+        -moz-transform: translateX(15px);
+        -o-transform: translateX(15px);
+        transform: translateX(15px);
+        opacity: 0;
+    }
+
+    51% {
+        -webkit-transform: translateX(-15px);
+        -moz-transform: translateX(-15px);
+        -o-transform: translateX(-15px);
+        transform: translateX(-15px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
@@ -101,29 +231,53 @@
     z-index: 0;
 }
 
+.TopBlogContBody{
+    position: relative;
+    z-index: 0;
+    @include min-max(992px, 1199px) {
+       max-width: 100%;
+       padding-left: 24px;
+       padding-right: 24px;
+    } 
+    @include mq('max', 991px) {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+     }   
+}
+
 
 .TopBlogRow {
     margin: 0 -12px; 
     @include mq('max', 1299px) {
         margin: 0 -10px;
     } 
+    @include mq('max', 1199px) {
+        margin-bottom: -30px;
+       @include scrollHorizontal; 
+    }  
     @include mq('max', 991px) {
-       @include scrollHorizontal;
-    } 
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
 .TopBlogCol {
     padding: 0 12px;
-    margin-top: 60px; 
+    margin-top: 48px; 
     @include mq('max', 1299px) {
         padding: 0 10px;
-    }
+    } 
     @include mq('max', 991px) {
-        @include columnGrid(230px);
+        @include columnGrid(260px);
+    } 
+    @include mq('max', 575px) {
+        @include columnGrid(275px);
     } 
 }
 
 .BlogDate, .BlogTitle{ 
+    font-size: 16px;
    @include SixteenFontMedia;
 }
 
@@ -133,6 +287,9 @@
     line-height: normal;
     font-size: 13px;
     font-style: normal;
+    @include mq('max', 991px) {
+        font-size: 12px;
+    } 
 }
 
 .BlogTitle {
@@ -140,12 +297,12 @@
     font-weight: 700;
     line-height: 26px;
     margin-top: 6px;
-    letter-spacing: 0.4px;
-    font-size: 17px;
+    letter-spacing: 0.4px; 
     font-style: normal;
+    min-height: 90px;
     @include mq('max', 991px) {
-        line-height: 1.5;
-       
+        line-height: 1.5; 
+        min-height: 70px;
     }
 }
 
@@ -192,8 +349,11 @@
           font-weight: 700;
           color: $lightgray;
           border-top: solid 1px #f5f0ea;
-          margin-top: 30px;
+          margin-top: 10px;
           padding-top: 11px;
+          @include mq('max', 991px) {
+           font-size: 13px;
+        } 
   svg{
     color: $secondary;
   }

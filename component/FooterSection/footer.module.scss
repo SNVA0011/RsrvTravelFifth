@@ -3,36 +3,24 @@
 
 
 .FooterBlock {
-    background-image: url('/images/bg-map-footer.png'), url('/images/shape-footer-left.png');
+    background-image: url('/images/bg-map-footer.png'), url('/images/shape-footer-left.png'), url('/images/shape-footer-left.png');
     background-color: #181818;
     background-repeat: no-repeat;
-    background-position: right center, left 70px top 70px;
+    background-position: right bottom, left 70px top 70px, left 290px bottom 40px;
     position: relative;
     z-index: 0;
-    @include mq('max', 575px) {
-      background-size: 300px;
+    @include mq('max', 991px) {
+        background-position: right bottom, left -40px top 70px, right -40px top 140px
     } 
-    @include mq('max', 425px) {
-        background-size: 250px; 
+    @include mq('max', 767px) {
+        background-position: right bottom, left -20px top 90px, right -20px top 360px;  
     }
-
-    &:before{
-        content: '';
-        @include bgPath('bgfooter-bg-up.webp');
-        width: 100%;
-        position: absolute;
-        top: -23px;
-        height: 40px;
-        background-repeat: repeat-x;
-        background-position: bottom center;
-        background-size: auto 100%;
-
-        @include mq('max', 991px) {
-            top: -33px; 
-            background-size: auto 80%;
-        }
  
+    @include mq('max', 575px) {
+        background-position: right bottom, left -40px top 120px, right -40px top 400px;
+        background-size: auto, 140px, 140px; 
     }
+ 
 
     // &.FooterOther{
     //     margin-top: 40px;
@@ -47,12 +35,12 @@
     @include mq('max', 1199px) {
         padding-top: 50px;
         padding-bottom: 50px;
-    }
-
+    } 
     @include mq('max', 575px) {
         padding-left: 24px;
         padding-right: 24px;
-    }
+        padding-bottom: 40px;
+    } 
 }
 
 .QuickLinks {
@@ -320,6 +308,9 @@
     @include mq('max', 991px) {
         margin-top: 60px; 
     }
+    @include mq('max', 575px) {
+        margin-top: 40px; 
+    }
 }
  
 
@@ -425,8 +416,16 @@
         left: 115px;
     }
     @include mq('max', 991px) {
-        left: 88px;
-    width: 12px;
+        left: 118px;
+    width: 15px;
+    }
+    @include mq('max', 767px) {
+        left: 102px;
+        width: 13px;
+    }
+    @include mq('max', 575px) {
+        left: 90px;
+        top: 10px;
     }
     }
 }
@@ -487,7 +486,7 @@
             border-radius: 50%;
     background-color: #3a3a3a;
     margin-right: 15px;
-    font-size: 24px;
+    font-size: 22px;
     @include css3('transition', all 200ms); 
    }
 }

@@ -43,10 +43,10 @@ const FooterSection = ({ title }) => {
 
 
               <ul className={styles.FooterSocial}>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/facebook-footer.webp'} alt="copyright" width={18} height={18} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/instagram-footer.webp'} alt="copyright" width={18} height={18} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/twitter-footer.webp'} alt="copyright" width={18} height={18} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/linkedin-footer.webp'} alt="copyright" width={18} height={18} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/facebook-footer.webp'} alt="copyright" width={20} height={20} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/instagram-footer.webp'} alt="copyright" width={20} height={20} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/twitter-footer.webp'} alt="copyright" width={20} height={20} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/linkedin-footer.webp'} alt="copyright" width={20} height={20} /></a></Link></li>
               </ul>
             </div>
 
@@ -55,7 +55,7 @@ const FooterSection = ({ title }) => {
           {FooterLinks?.length > 0 && <>
             {FooterLinks.map((item, index) => {
               return (
-                <Col xs={6} md={4} xl key={index}>
+                <Col xs={12} sm={6} md={3} xl key={index}>
                   <div className={styles.QuickLinks}>
                     <h5>{item.heading}</h5>
                     <ul>
@@ -78,8 +78,8 @@ const FooterSection = ({ title }) => {
             })}
           </>}
 
-          <Col xs={12} md={4} xl={3}>
-            <hr className={`d-md-none ${styles.ContactLinksHr}`}></hr>
+          <Col xs={12} sm={6} md={4} xl={3}>
+            <hr className={`d-sm-none ${styles.ContactLinksHr}`}></hr>
             <div className={`${styles.QuickLinks}`}>
               <h5>Contact</h5>
 
@@ -104,7 +104,7 @@ const FooterSection = ({ title }) => {
             </div>
           </Col>
 
-          <Col xs={12}  md={4} xl={3}>
+          <Col xs={12}  md={5} xl={3}>
             <hr className={`d-md-none ${styles.ContactLinksHr}`}></hr>
             <div className={`${styles.QuickLinks}`}>
               <h5 className={`${styles.NewsltrTitle}`}>Newsletter</h5>
@@ -118,7 +118,7 @@ const FooterSection = ({ title }) => {
 
               <ButtonStyle
                 content={<><span className='me-1'>Submit</span> <Icon icon="fa:send" width="16" height="16" /></>}
-                outline={true}
+                outline={false}
                 fullwidth={true}
                 onClick={() => { console.log("Click Event") }}
                 SubsCrbBtn={true}

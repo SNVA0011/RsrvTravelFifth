@@ -5,6 +5,10 @@
     padding: 60px 0 20px; 
     position: relative;
     z-index: 0;
+    overflow: hidden;
+    @include mq('max', 1199px) {
+        padding: 60px 0 0; 
+    }
 }
 
 .ExploreSrcDes {
@@ -14,14 +18,34 @@
     line-height: normal;
     margin-bottom: 10px;
     font-size: 16px;
-    @include SixteenFontMedia;
-    @include mq('max', 767px) {
-        margin-bottom: 6px;
-    }
+    @include mq('max', 1499px) {
+        font-size: 15px;
+      } 
+    @include mq('max', 1299px) {
+        font-size: 14px;
+      } 
+    @include mq('max', 1199px) {
+        font-size: 13px;
+      } 
+      @include mq('max', 991px) {
+        font-size: 14px;
+        border-bottom: dashed 1px #e1e1e1;
+        padding-bottom: 15px;
+        margin-bottom: 14px; 
+      } 
 
     img{
         margin: 0 10px;
         width: 34px;
+        @include mq('max', 1199px) {
+            margin: 0 8px;
+            width: 30px;
+          } 
+          @include mq('max', 991px) {
+            margin: 9px auto;
+            width: 34px;
+            display: block;
+          }
     }
 }
 
@@ -36,9 +60,13 @@
     padding-top: 16px;
     padding-bottom: 16px;
     @include mq('min', 768px) {
-        padding-left: 15px;
-        padding-right: 10px;
+        padding-left: 12px;
+        padding-right: 10px; 
     }
+    @include mq('max', 991px) {
+        padding-top: 0;
+        padding-bottom: 15px;     
+      }
 }
 
 .ExploreSrcDate {
@@ -57,40 +85,82 @@
     margin: 0 -12px -15px;
 
     @include mq('max', 1199px) {
-        margin: 0 -12px -15px;
-    }
-
+        margin: 0 -12px 0;
+    } 
     @include mq('max', 991px) {
-        @include scrollHorizontal;
-        padding-top: 60px;
-        padding-bottom: 63px;
-        margin: -60px -6px;
-        position: relative;
-    }
-    @include mq('max', 767px) {
-        margin-bottom: 0;
-        padding-bottom: 56px;
-    }
+        @include scrollHorizontal;  
+        padding-left: 24px;
+        padding-right: 24px;
+        margin: -5px -12px -22px
+    } 
+}
+
+.ExploreSrcCont{
+    position: relative;
+    z-index: 0;
+    @include min-max(992px, 1199px) {
+       max-width: 100%;
+       padding-left: 24px;
+       padding-right: 24px;
+    } 
+    @include mq('max', 991px) {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+     }   
 }
 
 .ExploreSrcCol {
-    padding: 0 12px 15px;
-
+    padding: 0 12px 22px;
+    -webkit-animation-name: fadeInRightdom;
+    animation-name: fadeInRightdom;
+    -webkit-animation-duration: 400ms;
+    animation-duration: 400ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
+    -moz-animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
+      -o-animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
+         animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
     @include mq('max', 1199px) {
-        padding: 0 12px 15px;
+        padding: 0 12px 22px;
     }
 
     @include mq('max', 991px) {
-        @include columnGrid(240px);
-        padding-bottom: 0;
-    }
-
-    @include mq('max', 767px) {
-        @include columnGrid(110px);
+        @include columnGrid(200px);
+        padding-top: 50px;
+        padding-bottom: 22px;
         text-align: center;
-        padding: 0 6px 0;
+    }  
+    @include mq('max', 375px) {
+        @include columnGrid(190px);
     }
 }
+ 
+    @-webkit-keyframes fadeInRightdom {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(15%, 0, 0);
+    transform: translate3d(15%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+    }
+    @keyframes fadeInRightdom {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(15%, 0, 0);
+    transform: translate3d(15%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+    } 
 
 
 .ExploreSrcCard,
@@ -113,13 +183,16 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    -o-user-select: none;
-    border: solid 1px rgb(233 233 233 / 50%);
-    background-color: rgb(251 251 251 / 60%);
-    padding-left: 12px;
-    @include mq('max', 767px) {
-        padding-bottom: 15px;
+    -o-user-select: none; 
+    box-shadow: 0 -4px 5px -4px rgba(0, 0, 0, 0.05), 0 5px 14px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 -4px 5px -4px rgba(0, 0, 0, 0.05), 0 5px 14px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 -4px 5px -4px rgba(0, 0, 0, 0.05), 0 5px 14px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0 -4px 5px -4px rgba(0, 0, 0, 0.05), 0 5px 14px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0 -4px 5px -4px rgba(0, 0, 0, 0.05), 0 5px 14px rgba(0, 0, 0, 0.05); 
+    @include mq('min', 992px) {
+        padding-left: 10px;
     }
+ 
 
     &::before {
         content: "";
@@ -129,14 +202,9 @@
         bottom: 4%; 
         border-right: 0;
         border-radius: 10px;
+ 
 
         @include mq('max', 991px) {
-            height: 100%;
-            bottom: 0;
-            left: 0;
-        }
-
-        @include mq('max', 767px) {
             height: 50%;
             width: 110%;
             bottom: auto;
@@ -153,15 +221,22 @@
 }
 
 .ExploreSrcCard:hover {
+    background-color: transparent;
+    border-color: $white;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
     &::before {
         background-color: #fff7ed;
 
-        @include mq('min', 768px) {
+        @include mq('min', 992px) {
             border-right: solid 2px $primary;
             width: 98%;
         }
 
-        @include mq('max', 767px) {
+        @include mq('max', 991px) {
             height: 100%;
             border-bottom: solid 2px $primary;
         }
@@ -196,10 +271,16 @@
     top: 10px;
     
     @include css3('transform-origin', right center);
-    @include mq('max', 767px) {
-        margin-bottom: 16px;
-        @include css3('transform-origin', bottom center);
-
+    @include mq('max', 991px) { 
+        @include css3('transform-origin', center);
+        border-radius: 50%;
+        width: 80px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        margin-top: -55px;
+        margin-bottom: 24px;
     }
 
     &:after {
@@ -245,8 +326,14 @@
     color: $secondary;
 }
 
-.RoutBtnInt{
+.RoutBtnInt{ 
     margin-left: 10px;
+    @include mq('max', 767px) {
+        margin-left: 8px;
+    }
+    @include mq('max', 425px) {
+        margin-left: 7px;
+    }
 }
 .RouteTitle{
     text-align: left;
@@ -257,6 +344,33 @@
     font-size: 13px;
     padding-left: 20px;
     padding-right: 20px;
-    font-weight: 600;
+    font-weight: 600;  
+    @include mq('max', 767px) {
+        width: 55px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    @include mq('max', 575px) {
+        width: 52px;
+    }
+    @include mq('max', 425px) {  
+    height: 34px;
+    border-radius: 50px;
+    }
+}
 
+.RoutAct{
+    @include css3('box-shadow', 0px 8px 15px rgb(137 22 82 / 15%));  
+}
+
+.ExploreDombtn{
+    @include columnGrid(280px); 
+    position: relative;
+    top: -2px;
+    @include mq('max', 767px) {
+    @include columnGrid(150px); 
+    }
+    @include mq('max', 425px) {
+        @include columnGrid(130px); 
+        }
 }
