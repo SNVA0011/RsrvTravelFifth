@@ -117,11 +117,7 @@
     -webkit-animation-duration: 400ms;
     animation-duration: 400ms;
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
-    -moz-animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
-      -o-animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
-         animation-timing-function: cubic-bezier(0.5, 0, 0, 1.25);
+    animation-fill-mode: both; 
     @include mq('max', 1199px) {
         padding: 0 12px 22px;
     }
