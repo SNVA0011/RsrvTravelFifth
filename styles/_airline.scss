@@ -1337,6 +1337,9 @@ hr.my-done-mladv {
 }
 
 .flgmodf-engine {
+  .datearv .datearv-0::after, .datearv .datearv-1::after{
+display: none;
+  }
   .travellers-class {
     &.trvmodify {
       @include mq("min", 768px) {

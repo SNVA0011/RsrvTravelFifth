@@ -1,13 +1,13 @@
 import React from 'react'
 import PageHead from '../component/PageHead'
-import RecentSearch from '../component/RecentSearch' 
+import RecentSearch from '../component/RecentSearch'
 import ExploreSearch from '../component/ExploreSearch'
-import TopAirlineDeal from '../component/TopAirlineDeal' 
+import TopAirlineDeal from '../component/TopAirlineDeal'
 import LatestBlogs from '../component/LatestBlogs'
 import ExploreTravel from '../component/ExploreTravel'
 import { Hostname, siteid } from '../utils/static'
 import { getApiData } from './api/GetApiResp'
-import OurHighlights from '../component/OurHighlights' 
+import OurHighlights from '../component/OurHighlights'
 import Head from 'next/head'
 
 
@@ -23,9 +23,9 @@ const index = ({ allblog }) => {
         description={`Book Tickets, luxury hotels tickets with best deals from your destinations & Get Best Price Guarantee @ ${Hostname}`}
         keywords={`${Hostname}, Hotels, Travel Deals`}
       />
-          <Head> 
-   <link rel="preload" fetchpriority="high" as="image" href="/images/engine-banner-airplane.webp" type="image/webp" />
-</Head>
+      <Head>
+        <link rel="preload" fetchpriority="high" as="image" href="/images/engine-banner-airplane.webp" type="image/webp" />
+      </Head>
 
       <ExploreTravel />
 
@@ -109,11 +109,11 @@ const index = ({ allblog }) => {
         />
 
 
- 
+
       </div>
 
-       
-    
+
+
 
 
     </>

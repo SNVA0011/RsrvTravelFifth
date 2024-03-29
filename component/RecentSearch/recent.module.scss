@@ -20,8 +20,9 @@
     -ms-user-select: none;
     -o-user-select: none;
     @include SixteenFontMedia;
+
     @include mq('max', 991px) {
-  border: solid 1px $primary; 
+        border: solid 1px $primary;
     }
 }
 
@@ -39,21 +40,23 @@
 
 
 .TopRecentCard:hover {
-    background-color: #240A34;  
+    background-color: #240A34;
+
     @include mq('min', 992px) {
-        @include css3(transform, scale(1.035)); 
+        @include css3(transform, scale(1.035));
     }
 
 
     .TopRecentImg {
-        @include css3('transform', 1.17); 
+        @include css3('transform', 1.17);
     }
 
     .TopRecentPlane {
         color: $secondary;
         font-weight: 700;
     }
-    .TopRecentTrv{
+
+    .TopRecentTrv {
         color: $white;
     }
 
@@ -80,35 +83,41 @@
         }
     }
 
-    .TopRecentThumb,&,
+    .TopRecentThumb,
+    &,
     .TopRecentImg {
-           @include mq('min', 992px) {
-        border-radius: 15px;
-           }
+        @include mq('min', 992px) {
+            border-radius: 15px;
+        }
     }
 }
 
 .TopRecentDashed {
     position: relative;
     top: 3px;
-    min-width: 75px; 
+    min-width: 75px;
+
     span {
-        display: block; 
+        display: block;
         max-width: 85px;
         margin: 0 auto;
+
         @include mq('max', 1199px) {
             max-width: 75px;
             margin: 0 auto;
-        } 
+        }
+
         @include mq('max', 991px) {
-            max-width: 70px; 
-        } 
-        @include mq('max',767px) {
-            max-width: 60px; 
-        } 
+            max-width: 70px;
+        }
+
+        @include mq('max', 767px) {
+            max-width: 60px;
+        }
+
         @include mq('max', 575px) {
             max-width: 50px;
-        } 
+        }
     }
 }
 
@@ -117,14 +126,17 @@
     margin-left: 20px;
     position: relative;
     min-width: 80px;
-    width: 80px; 
+    width: 80px;
+
     @include mq('max', 991px) {
         min-width: 64px;
         width: 64px;
-    } 
-    @include mq('max', 575px) { 
+    }
+
+    @include mq('max', 575px) {
         margin-left: 15px;
     }
+
     &:after {
         content: '';
         position: absolute;
@@ -139,7 +151,8 @@
         @include css3('transform', skewX(-20deg));
         @include css3('transform-origin', top left);
         @include css3('filter', blur(4px));
-    }   
+    }
+
     span {
         display: block;
         float: left;
@@ -152,7 +165,7 @@
 
 .TopRecentThumb,
 .TopRecentImg {
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .TopRecentPlane {
@@ -161,7 +174,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    @include SixteenFontMedia; 
+    @include SixteenFontMedia;
 }
 
 .TopRecentTrv {
@@ -187,18 +200,30 @@
 }
 
 .TopRecentRow {
-    margin: 0 -15px; 
+    margin: 0 -15px;
+
     @include mq('max', 1299px) {
         margin: 0 -12px;
-    }  
- 
+    }
+
     @include mq('max', 1199px) {
         margin: 0 -20px;
         @include scrollHorizontal;
     }
+
+    @include mq('max', 991px) {
+        padding-left: 18px;
+        padding-right: 18px;
+        margin: 0;
+    } 
+    @include mq('max', 767px) {
+        padding-left: 12px;
+        padding-right: 12px;
+    } 
     @include mq('max', 575px) {
-        padding: 0 12px; 
-    }
+        padding-left: 6px;
+        padding-right: 6px;
+    } 
 }
 
 .TopRecentCol {
@@ -211,13 +236,31 @@
     @include mq('max', 1299px) {
         padding: 0 10px;
     }
- 
+
     @include mq('max', 991px) {
         @include columnGrid(300px);
+
+        &:first-child {
+            margin-left: auto;
+        }
+
+        &:last-child {
+            margin-right: auto;
+        }
     }
 
     @include mq('max', 575px) {
-        @include columnGrid(260px);
+        @include columnGrid(286px);
+        padding: 0 6px;
+    }
+}
+
+@include mq('max', 991px) {
+    .TopReColFirst {
+        margin-left: auto;
+    } 
+    .TopReColLast {
+        margin-right: auto;
     }
 }
 
@@ -227,14 +270,15 @@
     }
 }
 
-.TopRecentContn {
-    @include mq('max', 1199px) {
-        padding-bottom: 56px;
-        margin-bottom: -16px;
-    }
+.TopRecentCoBody {
+    z-index: 1;
+
     @include mq('max', 991px) {
-        padding-bottom: 56px; 
-    } 
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+    }
 }
 
 .PopularRtsUlOp {
@@ -242,10 +286,10 @@
 
     @include mq('max', 1199px) {
         display: block;
-    } 
+    }
 }
 
 
-.TopRTravelDate{
+.TopRTravelDate {
     min-width: 70px
 }

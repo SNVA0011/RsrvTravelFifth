@@ -12,12 +12,14 @@ const ExploreTravel = ({ Title, SubTitle, ImgAlt }) => {
         <div className={styles.TrvWrpFlex}>
           <div className={styles.TrvWrp}>
             <h1>
-              Book your <span>flight</span> in minutes !
+              Book your <span>Flight</span> in minutes !
             </h1>
             <p>Find your flighte and explore the world with us. We will take care of the rest.</p>
           </div>
         </div>
+      </Container>
 
+      <Container className={`${styles.ExploreTrvContBody} homeexflg`}>
         <div className={styles.TrvEngWrp}>
           <EngineFields MobRadioCenter={true} />
         </div>

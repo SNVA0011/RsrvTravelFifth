@@ -354,8 +354,7 @@
         width: 52px;
     }
     @include mq('max', 425px) {  
-    height: 34px;
-    border-radius: 50px;
+    height: 34px; 
     }
 }
 

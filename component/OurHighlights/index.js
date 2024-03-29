@@ -8,10 +8,10 @@ const OurHighlights = ({ Title, Content }) => {
         <section className={styles.HighlightsBlock}>
             <Container className='position-relative'>
                 <SectionTitle title={Title} />
-                {Content?.length > 0 && <Row className={styles.HighlightsRow}>
+                {Content?.length > 0 && <Row className={`${styles.HighlightsRow}`}>
                     {Content.map((item, index) => {
                         return (
-                            <Col xs={12} md={4} lg={3} key={index} className={styles.HighlightsCol}>
+                            <Col xs={6} lg={3} key={index} className={styles.HighlightsCol}>
                                 <div className={`${styles.HighlightsCard}`}>
                                     <div className={styles.HighlightsThumb}>
                                         <img src={`/images/${item.icon}`} className={styles.HighlightsImg} alt={item.title} />
@@ -33,6 +33,14 @@ const OurHighlights = ({ Title, Content }) => {
                     })}
 
                 </Row>}
+
+                <div className='d-sm-none popularRtsUl-spt'>
+                        <ul className={`PopularRtsUl`}>
+                            <li className={'PopularRtsLi'}></li>
+                            <li className={`PopularRtsLi PopularRtsLiAct`}></li>
+                            <li className={'PopularRtsLi'}></li>
+                        </ul>
+                    </div>
             </Container>
         </section>
     )

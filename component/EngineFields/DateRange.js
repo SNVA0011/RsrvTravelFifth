@@ -39,9 +39,7 @@ export default function DateRange({
     >
       <div className="w-100">
         <Row className="mx-0">
-          <Col
-            xs={12}
-            sm={6}
+          <Col xs={6}
             className={`m-0 p-0 d-flex datearv-0`}
             onClick={() =>
               tripType === "2" ? handleCal() : setCalpress(false)
@@ -57,9 +55,7 @@ export default function DateRange({
               aria-labelledby="Departure"
             />
           </Col>
-          <Col
-            xs={12}
-            sm={6}
+          <Col xs={6}
             className={`m-0 p-0 d-flex datearv-1`}
             onClick={() => handleRound()}
           >

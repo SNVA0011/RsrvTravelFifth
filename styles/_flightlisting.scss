@@ -1,7 +1,7 @@
 // flightlisting
 .flgmodf-engine {
    @extend %full-width;
-   background-color:#15061f;
+   background-color: #15061f;
    padding: 27px 0;
 
    @include mq('max', 1199px) {
@@ -9,10 +9,10 @@
    }
 
    @include mq('max', 991px) {
-      padding: 42px 0 50px;
+      padding: 42px 0;
       @include css3('border-radius', 0 0 15px 15px);
    }
- 
+
    @include mqh('max', 640px) {
       @include css3('border-radius', 0);
    }
@@ -41,24 +41,31 @@
       }
    }
 
-   
-   .datearv .datearv-0::after{
-      @include mq("max", 991px) {
-background: #15061f;
+   .datearv {
+      .datearv-0::after {
+         @include mq("max", 991px) {
+            background: #15061f;
+         }
+      }
+      .datearv-1::before {
+         background: #554d5a;
+         top: 13.5px;
       }
    }
 
 
-   .engineexp-radio.light{
+   .engineexp-radio.light {
       @include mq('max', 767px) {
-       text-align: center;
+         text-align: center;
       }
    }
 
 
-   .radio-custom-site{
+
+   .radio-custom-site {
       color: $white;
-      .label{
+
+      .label {
          border-color: $white;
       }
    }
@@ -79,11 +86,12 @@ background: #15061f;
    }
 
 
-
    .engineexp-text {
       &.input-group {
-         background:  rgb(255 255 255 / 13%);
+         background: rgb(255 255 255 / 13%);
          @include css3('backdrop-filter', blur(4px));
+         @include css3("box-shadow", none);
+         border: none;
       }
 
       @include mq('min', 768px) {
@@ -91,23 +99,29 @@ background: #15061f;
             border-left: solid 12px transparent;
          }
       }
+
       .form-control {
          color: $white;
+
          &::-webkit-input-placeholder {
             color: $white;
-        }
+         }
 
-        &::-moz-placeholder {
+         &::-moz-placeholder {
             color: $white;
-        }
+         }
 
-        &:-ms-input-placeholder {
+         &:-ms-input-placeholder {
             color: $white;
-        }
+         }
 
-        &:-moz-placeholder {
+         &:-moz-placeholder {
             color: $white;
-        }
+         }
+      }
+
+      .form-label {
+         color: $secondary;
       }
    }
 
@@ -136,7 +150,7 @@ background: #15061f;
          display: none;
       }
 
-      .wroweng-mb-row.row{
+      .wroweng-mb-row.row {
          margin-bottom: 0;
          margin-top: 0;
       }
@@ -179,9 +193,10 @@ background: #15061f;
    .container {
       position: relative;
       z-index: 2;
+
       @include mq('max', 767px) {
-        padding-left: 22px;
-        padding-right: 22px;
+         padding-left: 22px;
+         padding-right: 22px;
       }
    }
 
@@ -390,6 +405,7 @@ background: #15061f;
 
    .checkbox-custom-site .checkbox {
       margin-bottom: 16px;
+
       &:last-child {
          margin-bottom: 0;
       }
@@ -942,13 +958,13 @@ background: #15061f;
          display: none;
       }
 
-      
-    img {
-      width: 15px;
-      height: 15px;
-      margin-left: 6px;
-      @extend %arrowimgAnimated;
-    }
+
+      img {
+         width: 15px;
+         height: 15px;
+         margin-left: 6px;
+         @extend %arrowimgAnimated;
+      }
 
       .sortBy-ar {
          width: 13px;
@@ -2278,7 +2294,7 @@ hr.hr-airline.int {
 
       strong {
          font-weight: inherit;
-         color: lighten( #2c3134, 52%);
+         color: lighten(#2c3134, 52%);
 
          @include mq("max", 991px) {
             display: block;
@@ -2922,7 +2938,7 @@ hr.hr-airline.int {
       right: auto;
       margin-left: 20px;
       bottom: 20px;
-      background : $primary;
+      background: $primary;
       background: -webkit-gradient(linear,
             left top,
             right top,
@@ -3587,10 +3603,10 @@ img.ret-intplane {
       padding: 6px 6px 0;
       border-radius: 20px;
 
-  .nav-item .nav-link{
-   @include mq("max", 991px) {
-         padding-bottom: 18px;
-   }
+      .nav-item .nav-link {
+         @include mq("max", 991px) {
+            padding-bottom: 18px;
+         }
       }
 
       .icvfaresub {
@@ -3667,6 +3683,7 @@ img.ret-intplane {
          color: #8f8f8f;
          font-weight: 400;
          font-size: 12px;
+
          @include mq("max", 767px) {
             border-right: solid 1px #e1e1e1;
             padding-right: 14px;
@@ -3681,8 +3698,9 @@ img.ret-intplane {
 
          span {
             display: block;
+
             @include mq("max", 767px) {
-            @include css3('transform', skewX(12deg));
+               @include css3('transform', skewX(12deg));
             }
          }
       }
@@ -4032,7 +4050,7 @@ img.ret-intplane {
    padding: 18px 30px 46px !important;
 
    @include mq("max", 600px) {
-      padding:  4px 15px 29px !important
+      padding: 4px 15px 29px !important
    }
 
    & h4 {
@@ -4061,10 +4079,11 @@ img.ret-intplane {
       @include mq("max", 600px) {
          font-size: 14px;
       }
-      b{
+
+      b {
          font-weight: 900;
          font-size: 105%;
-         margin: 0 2px; 
+         margin: 0 2px;
       }
    }
 
@@ -4073,13 +4092,15 @@ img.ret-intplane {
       justify-content: center;
       gap: 25px;
       margin-top: 25px;
+
       @include mq("max", 767px) {
          gap: 20px;
       }
-   
+
       @include mq("max", 575px) {
          gap: 16px;
       }
+
       button {
          padding: 10px 20px;
          color: #fff;
@@ -4102,17 +4123,18 @@ img.ret-intplane {
       }
    }
 }
- 
 
-.rtrip-departure{
-   .row{
+
+.rtrip-departure {
+   .row {
       margin-bottom: 22px;
-      &:last-child{
+
+      &:last-child {
          margin-bottom: 0;
       }
    }
 }
 
-.bncont{
+.bncont {
    min-width: 143px
 }

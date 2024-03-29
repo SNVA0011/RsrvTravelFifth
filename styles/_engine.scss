@@ -523,6 +523,9 @@
     @include mq('max', 1199px) {
         border-radius: 10px;
     }
+    @include mq('max', 767px) {
+        border-radius: 20px;
+    }
 }
 
 
@@ -540,20 +543,33 @@
         padding: 25px;
         margin-top: 10px;
     }
-
-    @include mq('max', 425px) {
-        padding: 15px 10px;
+    @include mq('max', 767px) {
+        padding: 22px;
     }
+    @include mq('max', 575px) {
+        padding: 18px;
+    }
+    @include mq('max', 375px) {
+        padding: 14px;
+    } 
 }
 
 
 .engineexp-fields {
     position: relative;
-    box-shadow: 0 10px 55px -5px rgb(0 0 0 / 4%), 0 6px 10px -6px rgb(0 0 0 / 8%);
-    -webkit-box-shadow: 0 10px 55px -5px rgb(0 0 0 / 4%), 0 6px 10px -6px rgb(0 0 0 / 8%);
-    -moz-box-shadow: 0 10px 55px -5px rgb(0 0 0 / 4%), 0 6px 10px -6px rgb(0 0 0 / 8%);
-    -ms-box-shadow: 0 10px 55px -5px rgb(0 0 0 / 4%), 0 6px 10px -6px rgb(0 0 0 / 8%);
-    -o-box-shadow: 0 10px 55px -5px rgb(0 0 0 / 4%), 0 6px 10px -6px rgb(0 0 0 / 8%);
+    box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 30px -6px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 30px -6px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 30px -6px rgba(0, 0, 0, 0.08);
+    -ms-box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 30px -6px rgba(0, 0, 0, 0.08);
+    -o-box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 30px -6px rgba(0, 0, 0, 0.08);
+
+    @include mq('max', 767px) {
+        box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 80px rgb(0 0 0 / 12%);
+        -webkit-box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 80px rgb(0 0 0 / 12%);
+        -moz-box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 80px rgb(0 0 0 / 12%);
+        -ms-box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 80px rgb(0 0 0 / 12%);
+        -o-box-shadow: 0 10px 135px -5px rgba(0, 0, 0, 0.04), 0 6px 80px rgb(0 0 0 / 12%); 
+    }
 
 
     .travmenu.row {
@@ -678,6 +694,31 @@ img.swap-desg {
     @include css3('transition', all 0.2s);
 }
 
+.homeexflg {
+    @include mq('max', 1199px) {
+        .engineexp-text.input-group.to {
+            padding-left: 12px;
+            border-left: 0; 
+            .form-label {
+                left: 49px;
+            }
+        }
+    }
+
+    @include mq('max', 767px) {
+        .engineexp-text.input-group.to {
+            padding-left: 0; 
+            .form-label {
+                left: 39px;
+            }
+        }
+        .engineexp-text .form-label{
+            color: $primary;
+            font-weight: 600;
+        }
+    }
+}
+
 .engineexp-text {
     &.input-group {
         border-radius: 8px;
@@ -686,10 +727,15 @@ img.swap-desg {
             border-radius: 80px;
         }
 
-        @include mq('max', 1199px) {
-            background: #f5f5f5;
+        @include mq('max', 1199px) { 
             @include css3('backdrop-filter', blur(4px));
             border-radius: 8px;
+            box-shadow: 0 0 0 1px $primary inset;
+            -webkit-box-shadow: 0 0 0 1px $primary inset;
+            -moz-box-shadow: 0 0 0 1px $primary inset;
+            -ms-box-shadow: 0 0 0 1px $primary inset;
+            -o-box-shadow: 0 0 0 1px $primary inset;
+            background-color: $white; 
         }
     }
 
@@ -795,26 +841,48 @@ img.swap-desg {
 .datearv {
     .input-group-text img {
         max-width: none;
-    }
-
-    .datearv-0 {
-        &::after {
+    } 
+    .datearv-0, .datearv-1 {
+        &::after,  &::before {
             content: "";
             width: 1px;
             height: 34px;
             flex-shrink: 0;
             background: rgb(135 135 135 / 40%);
-            top: 15.5px;
+            top: 15.5px; 
             position: absolute;
-            right: 0;
-
-            @include mq('max', 575px) {
-                width: 100%;
-                height: 2px;
-                top: auto;
-                bottom: -1px;
-                background: $white;
+            @include mq('max', 767px) {
+                top: 13px
             }
+            // @include mq('max', 575px) {
+            //     width: 100%;
+            //     height: 2px;
+            //     top: auto;
+            //     bottom: -1px;
+            //     background: $primary;
+            // }
+        }
+
+        .form-control{
+            @include mq('max', 767px) {
+             padding-right: 12px;
+            }
+        }
+    }
+
+    .datearv-0{
+        &::before{ 
+           visibility: hidden;
+           opacity: 0;
+        }
+    }
+
+    .datearv-1 { 
+        &::before{ 
+            left: 0;
+        } 
+        &::after{ 
+            right: 0;
         }
     }
 }
@@ -865,7 +933,7 @@ img.swap-desg {
     .dropdown-menu.show,
     .dropdown-menu {
         margin-top: 5px;
-        @include css3('box-shadow', 0 16px 824px 259px rgb(0 0 0 / 12%));
+        @include css3('box-shadow', 0 16px 824px 259px rgb(0 0 0 / 16%));
         overflow: hidden;
         @include css3('border-radius', 15px);
         border: none;
@@ -1051,7 +1119,7 @@ img.swap-desg {
     left: -62px !important;
     text-align: center;
     @include css3('border-radius', 10px);
-    @include css3('box-shadow', 0 16px 824px 259px rgb(0 0 0 / 12%));
+    @include css3('box-shadow', 0 16px 824px 259px rgb(0 0 0 / 16%));
     font-size: 14px;
     padding-top: 0;
     @include css3('user-select', none);

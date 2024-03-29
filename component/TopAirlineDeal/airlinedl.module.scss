@@ -11,16 +11,10 @@
 
     @include mq('max', 991px) {
         height: 68px;
-        margin-top: 12px;
     }
 
     @include mq('max', 767px) {
         height: 40px;
-        margin-top: -12px;
-    }
-
-    @include mq('max', 575px) {
-        margin-top: -22px;
     }
 }
 
