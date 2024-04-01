@@ -49,7 +49,7 @@ const ExploreSearch = ({ Title, Routes }) => {
                                 <Col xs={12} md={4} key={index} className={styles.ExploreSrcCol} style={{ animationDelay: index * 100 + "ms" }}>
                                     <div className={`d-flex flex-column flex-lg-row ${styles.ExploreSrcCard}`}>
                                         <div className={styles.ExploreSrcThumb}>
-                                            <Image src={`/images/${item.thumbnail}`} width={80} height={80} className={styles.ExploreSrcImg} alt={item.destination} />
+                                            <Image src={`/images/${item.thumbnail}`} width={80} height={80} className={styles.ExploreSrcImg} alt={item.code} quality={50}/>
                                         </div>
                                         <div className={`flex-grow-1 ${styles.ExploreSrcGrow}`}>
                                             <div className={`${styles.ExploreSrcDate}`}>
@@ -57,7 +57,7 @@ const ExploreSearch = ({ Title, Routes }) => {
                                             </div>
                                             <div className={`${styles.ExploreSrcDes}`}>
                                                 {item.from}
-                                                <img src='/images/route-lineplane-ico.png' />
+                                                <img src='/images/route-lineplane-ico.png' alt={'route-icon'} width={34} height={16.39} />
                                                 {item.to}
                                             </div>
                                             <div className={`${styles.ExploreSrcCode}`}>
@@ -83,7 +83,7 @@ const ExploreSearch = ({ Title, Routes }) => {
                                 <Col xs={12} md={4} key={index} className={styles.ExploreSrcCol} style={{ animationDelay: index * 100 + "ms" }}>
                                     <div className={`d-flex flex-column flex-lg-row ${styles.ExploreSrcCard}`}>
                                         <div className={styles.ExploreSrcThumb}>
-                                            <Image src={`/images/${item.thumbnail}`} width={80} height={80} className={styles.ExploreSrcImg} alt={item.destination} />
+                                            <Image src={`/images/${item.thumbnail}`} width={80} height={80} className={styles.ExploreSrcImg} alt={item.code}  quality={40} />
                                         </div>
                                         <div className={`flex-grow-1 ${styles.ExploreSrcGrow}`}>
                                             <div className={`${styles.ExploreSrcDate}`}>
@@ -91,7 +91,7 @@ const ExploreSearch = ({ Title, Routes }) => {
                                             </div>
                                             <div className={`${styles.ExploreSrcDes}`}>
                                                 {item.from}
-                                                <img src='/images/route-lineplane-ico.png' />
+                                                <img src='/images/route-lineplane-ico.png' alt={'route-icon'} width={34} height={16.39} />
                                                 {item.to}
                                             </div>
                                             <div className={`${styles.ExploreSrcCode}`}>

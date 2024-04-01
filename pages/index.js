@@ -21,11 +21,8 @@ const index = ({ allblog }) => {
       <PageHead
         title={`BrandName : Hotels, Vacations & Travel Deals`}
         description={`Book Tickets, luxury hotels tickets with best deals from your destinations & Get Best Price Guarantee @ ${Hostname}`}
-        keywords={`${Hostname}, Hotels, Travel Deals`}
-      />
-      <Head>
-        <link rel="preload" fetchpriority="high" as="image" href="/images/engine-banner-airplane.webp" type="image/webp" />
-      </Head>
+        keywords={`${Hostname}, Hotels, Travel Deals`} />
+
 
       <ExploreTravel />
 
@@ -69,14 +66,14 @@ const index = ({ allblog }) => {
         Title="Top Airline Deals"
         ViewALLBtn={'/airlines'}
         Routes={[
-          { 'thumbnail': 'airline-aqr-1.png' },
-          { 'thumbnail': 'airline-aqr-2.png' },
-          { 'thumbnail': 'airline-aqr-3.png' },
-          { 'thumbnail': 'airline-aqr-4.png' },
-          { 'thumbnail': 'airline-aqr-5.png' },
-          { 'thumbnail': 'airline-aqr-6.png' },
-          { 'thumbnail': 'airline-aqr-7.png' },
-          { 'thumbnail': 'airline-aqr-8.png' },
+          { 'thumbnail': 'UK' },
+          { 'thumbnail': 'AK' },
+          { 'thumbnail': 'AM' },
+          { 'thumbnail': 'AQ' },
+          { 'thumbnail': 'BG' },
+          { 'thumbnail': 'CS' },
+          { 'thumbnail': 'FC' },
+          { 'thumbnail': 'GH' },
         ]}
       />
 

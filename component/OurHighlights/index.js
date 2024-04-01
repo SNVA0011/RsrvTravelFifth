@@ -2,6 +2,7 @@ import React from 'react'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 import styles from './ourhighlight.module.scss'; 
+import Image from 'next/image';
 
 const OurHighlights = ({ Title, Content }) => {
     return (
@@ -14,7 +15,7 @@ const OurHighlights = ({ Title, Content }) => {
                             <Col xs={6} lg={3} key={index} className={styles.HighlightsCol}>
                                 <div className={`${styles.HighlightsCard}`}>
                                     <div className={styles.HighlightsThumb}>
-                                        <img src={`/images/${item.icon}`} className={styles.HighlightsImg} alt={item.title} />
+                                        <Image src={`/images/${item.icon}`} alt={item.title} width={50} height={50} quality={40}/>
                                     </div>
 
                                     <div className={`${styles.HighlightsGrow}`}>

@@ -35,6 +35,7 @@ const LatestBlogs = ({ Title, BlogsItems, ViewALLBtn, error }) => {
                                                     layout={'fill'}
                                                     objectFit={'cover'}
                                                     objectPosition={'top center'}
+                                                    quality={40}
                                                     className={styles.TopBlogImg}
                                                     alt={`${item.heading}`} />
                                             </div>

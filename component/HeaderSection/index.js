@@ -92,6 +92,7 @@ const HeaderSection = ({FlightHeader}) => {
                                         alt={BrandLogo.imgAlt}
                                         width={146}
                                         height={30}
+                                        
                                     />
                                 </a>
                             </Link>
@@ -148,7 +149,7 @@ const HeaderSection = ({FlightHeader}) => {
                                 (
                                     <li className="list-2">
                                         <button className={`btn sidenav-btn ${show ? "visible" : ""}`}
-                                            onClick={MenuShow}>
+                                            onClick={MenuShow}  aria-label="Toggle Nav">
                                             <span className="nvt-1" onClick={MenuShow}></span>
                                             <span className="nvt-2" onClick={MenuShow}></span>
                                             <span className="nvt-3" onClick={MenuShow}></span>
@@ -188,7 +189,7 @@ const HeaderSection = ({FlightHeader}) => {
                                         className={`${item.disable ? "disable" : ""}`}
                                     >
                                         <Link href={item.url}>
-                                            <a className="ripple-wv" onClick={MenuClose}>
+                                            <a className={`ripple-wv ${location.pathname === item.url ? `NavbarLinkAc ` : ''}`} onClick={MenuClose}>
                                                 <span>
                                                     <Icon icon={item.icon} />
                                                     {item.title}

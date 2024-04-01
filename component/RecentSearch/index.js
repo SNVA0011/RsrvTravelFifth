@@ -40,7 +40,7 @@ const RecentSearch = ({ Title, Routes }) => {
                                     </div>
 
                                     <div className={styles.TopRecentThumb}>
-                                        <Image src={`/images/${item.thumbnail}`} width={80} height={80} className={styles.TopRecentImg}
+                                        <Image src={`/images/${item.thumbnail}`} width={80} height={80} className={styles.TopRecentImg} quality={50}
                                             alt={`${item.from}-${item.to}`}
                                         />
                                     </div>

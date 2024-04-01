@@ -117,24 +117,21 @@
         }
 
         @include mq('max', 767px) {
-            font-size: 26px;
+            font-size: 24px;
             text-align: center;
             margin-top: 0;
             margin-bottom: 8px;
         }
 
         @include mq('max', 460px) {
-            text-align: center;
-            font-size: 28px;
-        }
-
-        @include mq('max', 425px) {
+            text-align: center; 
+        } 
+        @include mq('max', 575px) {
             font-size: 22px;
         }
-
-        @include mq('max', 375px) {
+        @include mq('max', 425px) {
             font-size: 20px;
-        }
+        } 
 
         span {
             color: $secondary;
@@ -158,17 +155,17 @@
         }
 
         @include mq('max', 767px) {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 300;
         }
 
         @include mq('max', 575px) {
-            font-size: 12px;
+            font-size: 11px;
             line-height: 1.6;
         }
 
         @include mq('max', 425px) {
-            font-size: 11px;
+            font-size: 10px;
             letter-spacing: 0.6px;
         }
     }
@@ -209,11 +206,7 @@
 }
 
 .ExploreTravel {
-    background-color: #f4f6f8;
-    @include bgPath('engine-banner-airplane.webp');
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #f4f6f8; 
     position: relative;
     width: 1440px;
     max-width: 96%;
@@ -241,24 +234,16 @@
             width: 100%;
             position: absolute;
             left: 0;
-            top: 0;
-            -webkit-background-size: 1.2em 1.2em;
-            -moz-background-size: 1.2em 1.2em;
-            -o-background-size: 1.2em 1.2em;
-            background-size: 1.2em 1.2em;
-            background-image: -webkit-radial-gradient(top left, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -webkit-radial-gradient(bottom left, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -webkit-radial-gradient(top right, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -webkit-radial-gradient(bottom right, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -webkit-radial-gradient(circle, transparent 25%, #240A34 26%), -webkit-linear-gradient(45deg, transparent 46%, #4d2a62 47%, #4d2a62 52%, transparent 53%), -webkit-linear-gradient(315deg, transparent 46%, #4d2a62 47%, #4d2a62 52%, transparent 53%);
-            background-image: -moz-radial-gradient(top left, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -moz-radial-gradient(bottom left, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -moz-radial-gradient(top right, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -moz-radial-gradient(bottom right, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -moz-radial-gradient(circle, transparent 25%, #240A34 26%), -moz-linear-gradient(45deg, transparent 46%, #4d2a62 47%, #4d2a62 52%, transparent 53%), -moz-linear-gradient(315deg, transparent 46%, #4d2a62 47%, #4d2a62 52%, transparent 53%);
-            background-image: -o-radial-gradient(top left, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -o-radial-gradient(bottom left, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -o-radial-gradient(top right, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -o-radial-gradient(bottom right, circle, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), -o-radial-gradient(circle, transparent 25%, #240A34 26%), -o-linear-gradient(45deg, transparent 46%, #4d2a62 47%, #4d2a62 52%, transparent 53%), -o-linear-gradient(315deg, transparent 46%, #4d2a62 47%, #4d2a62 52%, transparent 53%);
-            background-image: radial-gradient(circle at top left, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), radial-gradient(circle at bottom left, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), radial-gradient(circle at top right, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), radial-gradient(circle at bottom right, transparent 9%, #4d2a62 10%, #4d2a62 15%, transparent 16%), radial-gradient(circle, transparent 25%, #240A34 26%), linear-gradient(45deg, transparent 46%, #4d2a62 47%, #4d2a62 52%, transparent 53%), linear-gradient(135deg, transparent 46%, #4d2a62 47%, #4d2a62 52%, transparent 53%);
-            background-color: #240A34;
+            top: 0; 
+               background-color: #240A34;
             opacity: 1;
             -webkit-border-radius: 0 0 60% 60% / 10%;
             -moz-border-radius: 0 0 60% 60% / 10%;
-            border-radius: 0 0 60% 60% / 10%;
+            border-radius: 0 0 60% 60% / 10%; 
         }
-    }
+    } 
 
-    &,
+    &,.ExpAirlineImg,
     &::before {
         border-radius: 25px;
 
@@ -276,7 +261,7 @@
         width: 100%;
         height: 100%;
         background: rgb(36 10 52 / 20%);
-
+z-index: 1;
         @include mq('max', 767px) {
             display: none;
         }
@@ -294,6 +279,14 @@
 .TrvEngWrp {
     position: relative;
     z-index: 2;
+} 
+
+.ExpAirlineImgwrp{
+    width: 100%;
+    height: 100%;
+    @include mq('max', 767px) {
+      display: none;
+    }
 }
 
 .ExploreTrvContBody,
@@ -318,6 +311,15 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+    
+    @include mq('max', 375px) {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    @include mq('max', 360px) {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 
 .ExploreTrvContBody {
@@ -334,15 +336,15 @@
 
     @include mq('max', 767px) {
         top: 0;
-        padding: 33px 0
+        padding: 28px 0
     }
 
     @include mq('max', 375px) {
-        padding: 30px 0
+        padding: 24px 0
     }
 
     @include mq('max', 360px) {
-        padding: 28px 0
+        padding: 20px 0
     }
 }
 

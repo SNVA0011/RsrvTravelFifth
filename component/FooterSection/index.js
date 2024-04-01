@@ -43,10 +43,10 @@ const FooterSection = ({ title }) => {
 
 
               <ul className={styles.FooterSocial}>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/facebook-footer.webp'} alt="copyright" width={20} height={20} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/instagram-footer.webp'} alt="copyright" width={20} height={20} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/twitter-footer.webp'} alt="copyright" width={20} height={20} /></a></Link></li>
-                <li><Link href={'#'}><a target='_blank'><Image src={'/images/linkedin-footer.webp'} alt="copyright" width={20} height={20} /></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/facebook-footer.webp'} alt="copyright" width={20} height={20} quality={40}/></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/instagram-footer.webp'} alt="copyright" width={20} height={20} quality={40}/></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/twitter-footer.webp'} alt="copyright" width={20} height={20} quality={40}/></a></Link></li>
+                <li><Link href={'#'}><a target='_blank'><Image src={'/images/linkedin-footer.webp'} alt="copyright" width={20} height={20} quality={40}/></a></Link></li>
               </ul>
             </div>
 
@@ -126,10 +126,10 @@ const FooterSection = ({ title }) => {
 
               <div className="text-center">
                 <div className={styles.QuickMaster}>
-                  <Image src={'/images/cards-visa-mastercard.webp'} alt="cards-visa-mastercard" width={250} height={22} />
+                  <Image src={'/images/cards-visa-mastercard.webp'} alt="cards-visa-mastercard" width={250} height={22} quality={50} />
                 </div>
 
-                <Image src={'/images/rating-google.webp'} alt="rating-google" width={228} height={46} />
+                <Image src={'/images/rating-google.webp'} alt="rating-google" width={228} height={46} quality={50}/>
               </div>
 
             </div>

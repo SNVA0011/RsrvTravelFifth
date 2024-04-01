@@ -8,6 +8,15 @@ import EngineFields from '../EngineFields'
 const ExploreTravel = ({ Title, SubTitle, ImgAlt }) => {
   return (
     <section className={styles.ExploreTravel}>
+      <div className={styles.ExpAirlineImgwrp}>
+        <Image src={'/images/engine-banner-airplane.webp'}
+          fill={true}
+          priority={true}
+          layout={'fill'}
+          objectFit={'cover'}
+          quality={40} className={styles.ExpAirlineImg} />
+      </div>
+
       <Container className={styles.ExploreTravelCont}>
         <div className={styles.TrvWrpFlex}>
           <div className={styles.TrvWrp}>

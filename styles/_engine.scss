@@ -334,6 +334,9 @@
         @include mq('max', 1199px) {
             font-size: 15px;
         }
+        @include mq('max', 425px) {
+            font-size: 14px;
+        }
 
         @include mq('max', 767px) {
             margin-right: 34px;

@@ -16,6 +16,7 @@ const AdventureStarts = ({Title, SubTitle, BtnTitle}) => {
                             height={160}
                             className={BtnTitle}
                             alt={Title}
+                            quality={50}
                         />
                         </div>
                     </Col>
@@ -36,6 +37,7 @@ const AdventureStarts = ({Title, SubTitle, BtnTitle}) => {
                             width={224}
                             height={134}
                             alt={BtnTitle}
+                            quality={50}
                         />
                         </div>
                     </Col>

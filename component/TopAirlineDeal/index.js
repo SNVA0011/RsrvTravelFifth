@@ -24,10 +24,25 @@ const TopAirlineDeal = ({ Title, Routes, ViewALLBtn }) => {
                                 <Col xs={12} md={2} key={index} className={styles.TopAirlineCol}>
                                     <div className={`${styles.TopAirlineCard}`}>
 
+                                    <Image src={'/images/airline-round-wv.png'}
+                                                fill={true}
+                                                layout={'fill'}
+                                                objectFit={'fill'}
+                                                quality={40}
+                                                  />
+
+                                        <div className={styles.AirlineCode}>
+                                       
                                         <div className={styles.TopAirlineThumb}>
-                                            <img src={`/images/${item.thumbnail}`}
+                                            <Image src={`/images/airline-logo/${item.thumbnail}.png`}
                                                 className={styles.TopAirlineImg}
-                                                alt={`${item.from}-${item.to}`} />
+                                                quality={50}
+                                                alt={`airline-image`}
+                                                width={65}
+                                                height={65}
+                                            />
+                                        </div>
+                                        <div className={styles.AirlineCdp}>{item.thumbnail}</div> 
                                         </div>
 
                                     </div>

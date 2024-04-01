@@ -5,14 +5,14 @@ import Image from 'next/image'
 
 const SectionTitle = ({ title, ViewALLBtn, className = null }) => { 
   return (
-    <h4 className={`${styles.SectionTitle} ${ViewALLBtn ? styles.ViewALLBtnHeading : ''} ${className}`}>
+    <h2 className={`${styles.SectionTitle} ${ViewALLBtn ? styles.ViewALLBtnHeading : ''} ${className}`}>
       {title}
       {ViewALLBtn && <Link href={ViewALLBtn}>
         <a className={styles.ViewALLBtn}> View All
           <span><Image width="14" height="14" src={`/images/blog-arrow-right.png`} alt='arrow' /></span>
         </a>
       </Link>}
-    </h4>
+    </h2>
   )
 }
 

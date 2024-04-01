@@ -15,11 +15,7 @@
 }
 
 .AdventureCont {
-  @include bgPath('cta-bg-fotter.png');
-  background-color: #1c1c1c;
-  background-size: auto 100%;
-  background-repeat: repeat;
-  background-position: top center;
+  background-color: #1a1a1a;
   padding: 0;
   overflow: hidden;
   cursor: pointer;
@@ -30,9 +26,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
-  -webkit-box-shadow: 0 15px 20px -6px rgb(0 0 0 / 35%);
-  -moz-box-shadow: 0 15px 20px -6px rgb(0 0 0 / 35%);
-  box-shadow: 0 15px 20px -6px rgb(0 0 0 / 35%);
   border-radius: 6px;
   @include mq("min", 1200px) {
     max-width: 995px;
@@ -40,10 +33,6 @@
 
   @include mq('max', 575px) {
     padding: 10px 0 0; 
-    border-radius: 10px;
-    -webkit-box-shadow: 0 15px 25px -6px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 15px 25px -6px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 15px 25px -6px rgba(0, 0, 0, 0.5);
   } 
 }
 

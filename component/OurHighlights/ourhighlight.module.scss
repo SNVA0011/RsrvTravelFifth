@@ -2,6 +2,8 @@
 @import "../../styles/mixins";
 
 .HighlightsBlock {
+   position: relative;
+   z-index: 2;
    @include mq('min', 1200px) {
       padding: 0 0 16px;
       margin-top: 5px;
@@ -17,19 +19,7 @@
 
 
 .HighlightsImg {
-   height: 55px;
-
-   @include mq('max', 991px) {
-      height: 52px;
-   }
-
-   @include mq('max', 767px) {
-      height: 49px;
-   }
-
-   @include mq('max', 575px) {
-      height: 46px;
-   }
+object-fit: cover
 }
 
 

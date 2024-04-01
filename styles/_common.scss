@@ -1079,7 +1079,11 @@ input[type="number"] {
     padding-top: 18px;
     padding-bottom: 18px;
     @include css3('transition', all 0.4s cubic-bezier(0.5, 0, 0, 1.25));
-
+    &.NavbarLinkAc{
+      font-weight: 800;
+      color: $primary;
+      background-color: #fff8ec;
+    }
     &:hover {
       color: $white;
 

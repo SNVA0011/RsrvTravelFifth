@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { siteurl } from '../utils/static'
 
 
-const PageHead = ({ title, description, keywords }) => {
+const PageHead = ({ title, description, keywords, children }) => {
     const router = useRouter() 
     return (
         <>
@@ -13,6 +13,7 @@ const PageHead = ({ title, description, keywords }) => {
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
                 <link rel="canonical" href={siteurl + router.asPath} />
+                {children}
             </Head>
         </>
     )
